@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-X4EQ93HGVP');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servizi - Marco Baldi - Imbianchino</title>
+    <meta name="description" content="Servizi professionali di imbiancatura, decorazione e manutenzione verde. Scopri tutto quello che posso fare per te.">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const actionButtons = document.querySelectorAll('.service-detail .btn');
+            actionButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'select_content', {
+                            'content_type': 'servizio_button',
+                            'item_id': this.textContent.trim()
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <style>
+        .service-detail {
+            background-color: var(--white);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .service-detail h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .service-detail h3 {
+            color: var(--dark);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-detail ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-detail ul li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .service-detail ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .service-detail p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .price-info {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .price-info h4 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>Marco Baldi - Imbianchino</h1>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servizi.html" class="active">Servizi</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="preventivo.html">Preventivo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>I Miei Servizi</h1>
+            <p>Soluzioni professionali per ogni tua esigenza</p>
+        </div>
+    </div>
+
+    <!-- Servizi Dettagliati -->
+    <section>
+        <div class="container">
+            <!-- Imbiancatura -->
+            <div class="service-detail">
+                <h2>🎨 Imbiancatura Professionale</h2>
+                <p>Tinteggiatura interna ed esterna con prodotti di alta qualità, garantendo risultati duraturi e finiture impeccabili.</p>
+                
+                <h3>Servizi Inclusi</h3>
+                <ul>
+                    <li>Tinteggiatura pareti interne (camere, soggiorni, cucine, bagni)</li>
+                    <li>Tinteggiatura soffitti</li>
+                    <li>Pittura facciate esterne</li>
+                    <li>Trattamento superfici in legno (porte, finestre, battiscopa)</li>
+                    <li>Preparazione superfici (stuccatura, carteggiatura, primer)</li>
+                    <li>Ripristino pareti danneggiate</li>
+                    <li>Protezione mobili e pavimenti</li>
+                    <li>Pulizia finale cantiere</li>
+                </ul>
+
+                <h3>Prodotti Utilizzati</h3>
+                <ul>
+                    <li>Pitture traspiranti e lavabili</li>
+                    <li>Prodotti certificati per ambienti interni</li>
+                    <li>Vernici a basso impatto ambientale</li>
+                    <li>Smalti all'acqua per legno</li>
+                </ul>
+
+                <div class="price-info">
+                    <h4>💡 Informazioni</h4>
+                    <p>Ogni lavoro è unico. Richiedi un preventivo gratuito e personalizzato per il tuo progetto.</p>
+                </div>
+            </div>
+
+            <!-- Decorazioni -->
+            <div class="service-detail">
+                <h2>✨ Decorazioni e Finiture Speciali</h2>
+                <p>Tecniche decorative per rendere unici i tuoi ambienti con effetti particolari e personalizzati.</p>
+                
+                <h3>Tecniche Decorative</h3>
+                <ul>
+                    <li>Spugnatura e velatura</li>
+                    <li>Effetto spatolato veneziano</li>
+                    <li>Stucco antico</li>
+                    <li>Effetti materici</li>
+                    <li>Rigature e geometrie</li>
+                    <li>Decorazioni murali personalizzate</li>
+                    <li>Trompe-l'oeil (effetti illusionistici)</li>
+                </ul>
+
+                <h3>Quando Scegliere le Decorazioni</h3>
+                <ul>
+                    <li>Per dare carattere a una parete importante</li>
+                    <li>Per valorizzare ambienti di rappresentanza</li>
+                    <li>Per mascherare imperfezioni con classe</li>
+                    <li>Per creare atmosfere uniche e personalizzate</li>
+                </ul>
+
+                <div class="price-info">
+                    <h4>💡 Consulenza Gratuita</h4>
+                    <p>Contattami per una consulenza personalizzata. Posso mostrarti campioni e consigliarti la soluzione migliore per i tuoi ambienti.</p>
+                </div>
+            </div>
+
+            <!-- Manutenzione Verde -->
+            <div class="service-detail">
+                <h2>🌿 Manutenzione Verde</h2>
+                <p>Cura professionale di giardini, aree verdi e spazi esterni per mantenerli sempre in ordine e in salute.</p>
+                
+                <h3>Servizi di Giardinaggio</h3>
+                <ul>
+                    <li>Taglio prato e bordure</li>
+                    <li>Potatura siepi e arbusti</li>
+                    <li>Potatura alberi</li>
+                    <li>Pulizia aiuole e rimozione erbacce</li>
+                    <li>Concimazione e trattamenti</li>
+                    <li>Sistemazione aree verdi</li>
+                    <li>Piccole opere di giardinaggio</li>
+                    <li>Manutenzione ordinaria e straordinaria</li>
+                </ul>
+
+                <h3>Manutenzione Programmata</h3>
+                <ul>
+                    <li>Interventi periodici concordati</li>
+                    <li>Calendario stagionale delle manutenzioni</li>
+                    <li>Monitoraggio salute piante</li>
+                    <li>Gestione irrigazione</li>
+                </ul>
+
+                <div class="price-info">
+                    <h4>💡 Contratti Periodici</h4>
+                    <p>Disponibile servizio con contratto annuale per manutenzione programmata del tuo giardino. Contattami per maggiori informazioni.</p>
+                </div>
+            </div>
+
+            <!-- Altri Servizi -->
+            <div class="service-detail">
+                <h2>🔧 Altri Servizi</h2>
+                <p>Piccole manutenzioni e lavori accessori per completare il tuo progetto.</p>
+                
+                <ul>
+                    <li>Rimozione carta da parati</li>
+                    <li>Applicazione carta da parati</li>
+                    <li>Piccole riparazioni murarie</li>
+                    <li>Stuccature e rasature</li>
+                    <li>Trattamenti antimuffa</li>
+                    <li>Consulenza per scelta colori</li>
+                    <li>Sopralluoghi gratuiti</li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center" style="margin-top: 3rem;">
+                <h2 style="margin-bottom: 1.5rem;">Interessato ai Miei Servizi?</h2>
+                <div class="cta-buttons">
+                    <a href="preventivo.html" class="btn btn-primary btn-large">Richiedi Preventivo Gratuito</a>
+                    <a href="contatti.html" class="btn btn-outline btn-large">Contattami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Marco Baldi - Imbianchino</h3>
+                    <p>Servizi professionali di imbiancatura e manutenzione verde</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contatti</h3>
+                    <p>Tel: <a href="tel:+393384531102">+39 338 453 1102</a></p>
+                    <p>Email: <a href="mailto:marco.baldi.24@gmail.com">marco.baldi.24@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Link Rapidi</h3>
+                    <ul>
+                        <li><a href="servizi.html">Servizi</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="preventivo.html">Preventivo</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Marco Baldi - Imbianchino. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

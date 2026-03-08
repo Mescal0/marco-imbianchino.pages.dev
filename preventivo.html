@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-X4EQ93HGVP');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richiedi Preventivo - Marco Baldi - Imbianchino</title>
+    <meta name="description" content="Richiedi un preventivo gratuito e senza impegno per i tuoi lavori di imbiancatura e manutenzione verde.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+        }
+
+        .form-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group small {
+            display: block;
+            margin-top: 0.25rem;
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            margin-right: 0.75rem;
+            cursor: pointer;
+        }
+
+        .checkbox-item label {
+            margin-bottom: 0;
+            cursor: pointer;
+            font-weight: 400;
+        }
+
+        .estimate-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .estimate-box h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .estimate-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .estimate-note {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .error-message {
+            color: #dc2626;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .success-message {
+            background-color: #d1fae5;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: none;
+        }
+
+        .success-message h3 {
+            color: #065f46;
+            margin-bottom: 0.5rem;
+        }
+
+        .success-message p {
+            color: #047857;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .radio-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .radio-item {
+            position: relative;
+        }
+
+        .radio-item input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .radio-item label {
+            display: block;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .radio-item input[type="radio"]:checked + label {
+            border-color: var(--primary-color);
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .radio-item label:hover {
+            border-color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>Marco Baldi - Imbianchino</h1>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servizi.html">Servizi</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="preventivo.html" class="active">Preventivo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Richiedi Preventivo Gratuito</h1>
+            <p>Compila il form e ricevi una stima in pochi minuti</p>
+        </div>
+    </div>
+
+    <!-- Form Content -->
+    <section>
+        <div class="container">
+            <div class="form-container">
+                <!-- Success Message -->
+                <div class="success-message" id="successMessage">
+                    <h3>✓ Richiesta Inviata!</h3>
+                    <p>Grazie per la tua richiesta. Ti contatterò al più presto per discutere i dettagli del progetto.</p>
+                </div>
+
+                <!-- Estimate Box -->
+                <div class="estimate-box" id="estimateBox" style="display: none;">
+                    <h3>Stima Indicativa</h3>
+                    <div class="estimate-amount" id="estimateAmount">€ 0</div>
+                    <p class="estimate-note">Questa è una stima approssimativa. Il preventivo definitivo verrà fornito dopo un sopralluogo gratuito.</p>
+                </div>
+
+                <form id="preventivoForm">
+                    <!-- Dati Personali -->
+                    <div class="form-section">
+                        <h3>📋 I Tuoi Dati</h3>
+                        
+                        <div class="form-group">
+                            <label for="nome">Nome e Cognome *</label>
+                            <input type="text" id="nome" name="nome" required>
+                            <span class="error-message" id="nomeError">Inserisci il tuo nome</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError">Inserisci un'email valida</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Telefono *</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                            <small>Preferibilmente cellulare per WhatsApp</small>
+                            <span class="error-message" id="telefonoError">Inserisci un numero di telefono valido</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="citta">Città *</label>
+                            <input type="text" id="citta" name="citta" required>
+                            <span class="error-message" id="cittaError">Inserisci la città</span>
+                        </div>
+                    </div>
+
+                    <!-- Tipo di Servizio -->
+                    <div class="form-section">
+                        <h3>🎯 Che Servizio Ti Interessa?</h3>
+                        
+                        <div class="form-group">
+                            <label>Seleziona il servizio *</label>
+                            <div class="radio-group">
+                                <div class="radio-item">
+                                    <input type="radio" id="imbiancatura" name="servizio" value="imbiancatura" required>
+                                    <label for="imbiancatura">🎨 Imbiancatura</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="decorazioni" name="servizio" value="decorazioni">
+                                    <label for="decorazioni">✨ Decorazioni</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="verde" name="servizio" value="verde">
+                                    <label for="verde">🌿 Manutenzione Verde</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="multiplo" name="servizio" value="multiplo">
+                                    <label for="multiplo">🔧 Più Servizi</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dettagli Progetto -->
+                    <div class="form-section">
+                        <h3>📐 Dettagli del Progetto</h3>
+                        
+                        <div class="form-group">
+                            <label for="tipologia">Tipologia Immobile</label>
+                            <select id="tipologia" name="tipologia">
+                                <option value="">Seleziona...</option>
+                                <option value="appartamento">Appartamento</option>
+                                <option value="villa">Villa/Villetta</option>
+                                <option value="ufficio">Ufficio/Commerciale</option>
+                                <option value="condominio">Condominio</option>
+                                <option value="altro">Altro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="metratura">Metratura Approssimativa (mq)</label>
+                            <input type="number" id="metratura" name="metratura" min="0" placeholder="es. 80">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stanze">Numero Stanze/Ambienti</label>
+                            <input type="number" id="stanze" name="stanze" min="0" placeholder="es. 3">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cosa Includere?</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="pareti" name="lavori[]" value="pareti">
+                                    <label for="pareti">Pareti</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="soffitti" name="lavori[]" value="soffitti">
+                                    <label for="soffitti">Soffitti</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="porte" name="lavori[]" value="porte">
+                                    <label for="porte">Porte/Finestre</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="esterno" name="lavori[]" value="esterno">
+                                    <label for="esterno">Facciata Esterna</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="urgenza">Quando Ti Servirebbe?</label>
+                            <select id="urgenza" name="urgenza">
+                                <option value="flessibile">Flessibile</option>
+                                <option value="1-2-settimane">1-2 settimane</option>
+                                <option value="1-mese">Entro 1 mese</option>
+                                <option value="oltre">Oltre 1 mese</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="note">Note Aggiuntive</label>
+                            <textarea id="note" name="note" placeholder="Descrivi eventuali lavori particolari, problemi da risolvere, tue preferenze..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Privacy -->
+                    <div class="form-section">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Accetto che i miei dati vengano utilizzati per ricevere il preventivo richiesto *</label>
+                        </div>
+                        <span class="error-message" id="privacyError">Devi accettare per procedere</span>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                            Invia Richiesta Preventivo
+                        </button>
+                    </div>
+
+                    <p class="text-center" style="color: var(--gray); margin-top: 1rem;">
+                        <small>* Campi obbligatori</small>
+                    </p>
+                </form>
+
+                <!-- Alternative Contact -->
+                <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--light);">
+                    <h3 style="margin-bottom: 1rem;">Preferisci Parlare Direttamente?</h3>
+                    <div class="cta-buttons">
+                        <a href="tel:+393384531102" class="btn btn-secondary">📞 Chiamami</a>
+                        <a href="https://wa.me/393XXXXXXXXX" class="btn btn-whatsapp" target="_blank">📱 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Marco Baldi - Imbianchino</h3>
+                    <p>Servizi professionali di imbiancatura e manutenzione verde</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contatti</h3>
+                    <p>Tel: <a href="tel:+393384531102">+39 338 453 1102</a></p>
+                    <p>Email: <a href="mailto:marco.baldi.24@gmail.com">marco.baldi.24@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Link Rapidi</h3>
+                    <ul>
+                        <li><a href="servizi.html">Servizi</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="preventivo.html">Preventivo</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Marco Baldi - Imbianchino. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="preventivo.js"></script>
+</body>
+</html>

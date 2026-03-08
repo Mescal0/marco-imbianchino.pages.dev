@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-X4EQ93HGVP');
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'select_content', {
+                            'content_type': 'portfolio_category',
+                            'item_id': this.dataset.category
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Marco Baldi - Imbianchino</title>
+    <meta name="description" content="Guarda i miei lavori di imbiancatura, decorazione e manutenzione verde. Portfolio fotografico dei progetti realizzati.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: var(--light);
+            aspect-ratio: 4/3;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            color: var(--white);
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-overlay h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            background-color: transparent;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .placeholder-note {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .placeholder-note h3 {
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .placeholder-note p {
+            color: #78350f;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>Marco Baldi - Imbianchino</h1>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servizi.html">Servizi</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="preventivo.html">Preventivo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Portfolio Lavori</h1>
+            <p>Alcuni dei progetti che ho realizzato</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Content -->
+    <section>
+        <div class="container">
+            <!-- Nota Informativa -->
+            <div class="placeholder-note">
+                <h3>📸 Galleria Lavori</h3>
+                <p>Le immagini mostrate rappresentano il tipo di lavori che eseguo. Contattami per vedere foto specifiche dei miei progetti o per discutere il tuo prossimo lavoro.</p>
+            </div>
+
+            <!-- Filtri Categoria -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="tutti">Tutti</button>
+                <button class="filter-btn" data-category="imbiancatura">Imbiancatura</button>
+                <button class="filter-btn" data-category="decorazioni">Decorazioni</button>
+                <button class="filter-btn" data-category="verde">Manutenzione Verde</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <!-- Imbiancatura Items -->
+                <div class="portfolio-item" data-category="imbiancatura">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop" alt="Imbiancatura appartamento">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Appartamento Centro Storico</h3>
+                        <p>Tinteggiatura completa 3 camere + bagno</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="imbiancatura">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&h=600&fit=crop" alt="Villetta bifamiliare">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Villetta Bifamiliare</h3>
+                        <p>Facciata esterna e interni completi</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="imbiancatura">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800&h=600&fit=crop" alt="Ufficio commerciale">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Ufficio Commerciale</h3>
+                        <p>Tinteggiatura 5 stanze + reception</p>
+                    </div>
+                </div>
+
+                <!-- Decorazioni Items -->
+                <div class="portfolio-item" data-category="decorazioni">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&h=600&fit=crop" alt="Soggiorno moderno">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Soggiorno Moderno</h3>
+                        <p>Spatolato veneziano parete feature</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="decorazioni">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop" alt="Camera da letto">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Camera da Letto</h3>
+                        <p>Effetto velatura su pareti</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="decorazioni">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" alt="Ingresso signorile">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Ingresso Signorile</h3>
+                        <p>Stucco veneziano effetto marmo</p>
+                    </div>
+                </div>
+
+                <!-- Manutenzione Verde Items -->
+                <div class="portfolio-item" data-category="verde">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&h=600&fit=crop" alt="Giardino privato">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Giardino Privato</h3>
+                        <p>Potatura siepi e pulizia aiuole</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="verde">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop" alt="Parco condominiale">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Parco Condominiale</h3>
+                        <p>Manutenzione ordinaria mensile</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="verde">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1588420343618-6141b3784bce?w=800&h=600&fit=crop" alt="Giardino villa">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Giardino Villa</h3>
+                        <p>Sistemazione completa area verde</p>
+                    </div>
+                </div>
+
+                <!-- Mixed Items -->
+                <div class="portfolio-item" data-category="imbiancatura">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop" alt="Condominio scale">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Condominio 8 Unità</h3>
+                        <p>Tinteggiatura scale e parti comuni</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="decorazioni">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop" alt="Salone ristorante">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Salone Ristorante</h3>
+                        <p>Decorazioni pareti tematiche</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="imbiancatura">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&h=600&fit=crop" alt="Ristrutturazione bagno">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Ristrutturazione Bagno</h3>
+                        <p>Pittura antimuffa e finiture</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center" style="margin-top: 3rem;">
+                <h2 style="margin-bottom: 1rem;">Ti Piace il Mio Lavoro?</h2>
+                <p style="color: var(--gray); margin-bottom: 2rem; font-size: 1.1rem;">Richiedi un preventivo gratuito per il tuo progetto</p>
+                <div class="cta-buttons">
+                    <a href="preventivo.html" class="btn btn-primary btn-large">Richiedi Preventivo</a>
+                    <a href="contatti.html" class="btn btn-outline btn-large">Contattami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Marco Baldi - Imbianchino</h3>
+                    <p>Servizi professionali di imbiancatura e manutenzione verde</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contatti</h3>
+                    <p>Tel: <a href="tel:+393384531102">+39 338 453 1102</a></p>
+                    <p>Email: <a href="mailto:marco.baldi.24@gmail.com">marco.baldi.24@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Link Rapidi</h3>
+                    <ul>
+                        <li><a href="servizi.html">Servizi</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="preventivo.html">Preventivo</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Marco Baldi - Imbianchino. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Filtro Portfolio
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Rimuovi active da tutti
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Aggiungi active al bottone cliccato
+                btn.classList.add('active');
+
+                const category = btn.dataset.category;
+
+                portfolioItems.forEach(item => {
+                    if (category === 'tutti' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
