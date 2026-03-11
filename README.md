@@ -6,19 +6,14 @@ Welcome to the project! Here we detail our services and offerings.
 
 ...
 
-### Corrections
+## Request a Quote
 
-- Line 46: Corrected "Imbiaancature" to "Imbiancature".
+For pricing information and services, you can request a quote through:
 
-- Line 105: Updated Cloudflare link to [Cloudflare](https://pages.cloudflare.com).
+1. **WhatsApp:** Contact Marco at [393384531102](https://wa.me/393384531102)
+2. **Email:** Send an email to [marco.baldi.24@gmail.com](mailto:marco.baldi.24@gmail.com)
 
-- Line 130: Corrected typo from "formsubit.co" to "formsubmit.co".
-
-- Line 133: Fixed link typo from "formsubit.co" to "formsubmit.co".
-
-- Updated all references from "marco-imbianchino.pages.dev" to "https-marco-imbianchino.pages.dev".
-
-- Fixed price comment inconsistencies on lines 55-58 to reflect actual values.
+Provide your project details and we will get back to you shortly!
 
 ## Service Pricing
 
@@ -26,4 +21,4 @@ Welcome to the project! Here we detail our services and offerings.
 2. **Service B**: $200
 3. **Service C**: $300
 
-For more details, please do check out the individual service pages!
+For more details, please check out the individual service pages!
