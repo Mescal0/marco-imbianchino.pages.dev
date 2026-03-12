@@ -1,5 +1,17 @@
 # Sito Web Imbianchino - Guida Completa
 
+## Indice
+- [Panoramica](#-panoramica)
+- [Personalizzazione Immediata](#-personalizzazione-immediata)
+- [Come Usare il Sito](#-come-usare-il-sito)
+- [Configurare Invio Email](#-configurare-invio-email)
+- [Funzionalità Implementate](#-funzionalità-implementate)
+- [Personalizzazioni Avanzate](#-personalizzazioni-avanzate)
+- [Checklist Pre-Launch](#️-checklist-pre-launch)
+- [Troubleshooting](#-troubleshooting)
+- [Prossimi Step Consigliati](#-prossimi-step-consigliati)
+- [License](#-license)
+
 ## 📋 Panoramica
 Sito web professionale multi-pagina per attività di imbiancatura e manutenzione verde, con preventivatore online integrato.
 
@@ -19,34 +31,34 @@ Sito web professionale multi-pagina per attività di imbiancatura e manutenzione
 ## 🎯 Personalizzazione Immediata
 
 ### 1. DATI CONTATTO (PRIORITÀ ALTA)
-Sostituisci in TUTTI i file HTML: +393384531102 o email a marco.baldi.24@gmail.com
+Sostituisci in TUTTI i file HTML: +393384531102 o email marco.baldi.24@gmail.com
 
 **Telefono:**
 - Cerca: `+393000000000`
 - Sostituisci con: il tuo numero (es. `+393384531102`)
 
 **Email:**
-- Cerca:`esempio.it'
-- Sostituisci con: <marco.baldi.24@gmail.com>
+- Cerca: `esempio.it`
+- Sostituisci con: `marco.baldi.24@gmail.com`
 
 **WhatsApp:**
 - Cerca: `https://wa.me/393300000000`
-- Sostituisci con: `https://wa.me/393384531102` (senza spazi)
+- Sostituisci con: `https://wa.me/393384531102`
 
 **Nome/Brand:**
 - Cerca: `Marco Imbianchino`
-- Sostituisci con: Imbiancature&Servizi Giardinaggio Marco
+- Sostituisci con: `Imbiancature & Servizi Giardinaggio Marco`
 
 **Zona Operativa:**
 - In `contatti.html`, cerca `Roma e provincia`
-- Sostituisci con la tua zona Firenze Pistoia e Provincia
+- Sostituisci con la tua zona `Firenze, Pistoia e Provincia`
 
 ### 2. PERSONALIZZA SERVIZI
 In `servizi.html` modifica:
-- Descrizioni servizi ( Imbiancature Interne ed esterne Decorazioni servizi di mantenimento verde ) 
-- Prezzi (Traspirante 5 Euro mq Antimuffa 7 Euro mq Quarzi 10 Euro mq Smalti 15/20 Euro mq)
-- Lista lavorazioni offerte (Stuccature Risanamenti Verniciatura Velatura Tagio Erba Siepi Potature )
-- Prodotti utilizzati ( Sigma San Marco)
+- Descrizioni servizi (Imbiancature interne ed esterne, decorazioni, servizi di mantenimento verde)
+- Prezzi (Traspirante 5 €/mq, Antimuffa 7 €/mq, Quarzi 10 €/mq, Smalti 15/20 €/mq)
+- Lista lavorazioni offerte (Stuccature, Risanamenti, Verniciatura, Velatura, Taglio erba, Siepi, Potature)
+- Prodotti utilizzati (Sigma, San Marco)
 
 ### 3. PREVENTIVATORE - Prezzi Base
 In `preventivo.js` (righe 8-13):
@@ -127,10 +139,10 @@ Opzionale: Collega dominio personalizzato (tipo `tuonome.it`)
 ## 📧 Configurare Invio Email (Form Contatti/Preventivo)
 
 ### Soluzione 1: FormSubmit.co (FACILE)
-1. Vai su [formsubit.co](https://formsubit.co)
+1. Vai su [formsubmit.co](https://formsubmit.co)
 2. In `preventivo.html` e `contatti.html`, aggiungi al form:
 ```html
-<form action="https://formsubit.co/TUA_EMAIL" method="POST">
+<form action="https://formsubmit.co/TUA_EMAIL" method="POST">
 ```
 3. Riceverai email ad ogni submission
 
@@ -274,7 +286,8 @@ Questo sito è tuo. Puoi modificarlo, distribuirlo, venderlo come preferisci.
 
 ---
 
-**Creato il:** 2025-01-18
-**Versione:** 1.0
-**Stack:** HTML5, CSS3, Vanilla JavaScript
+**Creato il:** 2025-01-18  
+**Aggiornato il:** 2026-03-12  
+**Versione:** 1.1  
+**Stack:** HTML5, CSS3, Vanilla JavaScript  
 **Hosting consigliato:** Cloudflare Pages (gratis)
