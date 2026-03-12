@@ -19,7 +19,7 @@ Sito web professionale multi-pagina per attività di imbiancatura e manutenzione
 ## 🎯 Personalizzazione Immediata
 
 ### 1. DATI CONTATTO (PRIORITÀ ALTA)
-Sostituisci in TUTTI i file HTML:
+Sostituisci in TUTTI i file HTML: +393384531102 o email a marco.baldi.24@gmail.com
 
 **Telefono:**
 - Cerca: `+393000000000`
@@ -43,9 +43,9 @@ Sostituisci in TUTTI i file HTML:
 
 ### 2. PERSONALIZZA SERVIZI
 In `servizi.html` modifica:
-- Descrizioni servizi
+- Descrizioni servizi ( Imbiancature Interne ed esterne Decorazioni servizi di mantenimento verde ) 
 - Prezzi (Traspirante 5 Euro mq Antimuffa 7 Euro mq Quarzi 10 Euro mq Smalti 15/20 Euro mq)
-- Lista lavorazioni offerte (Stuccature Risanamenti Verniciatura Velatura )
+- Lista lavorazioni offerte (Stuccature Risanamenti Verniciatura Velatura Tagio Erba Siepi Potature )
 - Prodotti utilizzati ( Sigma San Marco)
 
 ### 3. PREVENTIVATORE - Prezzi Base
