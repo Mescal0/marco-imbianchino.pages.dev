@@ -8,205 +8,33 @@
         gtag('js', new Date());
         gtag('config', 'G-X4EQ93HGVP');
     </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GT-P8QQXMKH');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richiedi Preventivo - Marco Baldi - Imbianchino</title>
     <meta name="description" content="Richiedi un preventivo gratuito e senza impegno per i tuoi lavori di imbiancatura e manutenzione verde.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Richiedi Preventivo Gratuito - Marco Baldi - Imbianchino">
+    <meta property="og:description" content="Richiedi un preventivo gratuito per imbiancatura, decorazioni e manutenzione verde a Monsummano Terme.">
+    <meta property="og:url" content="https://marco-imbianchino.pages.dev/preventivo.html">
+    <link rel="canonical" href="https://marco-imbianchino.pages.dev/preventivo.html">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .form-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: var(--white);
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .form-section {
-            margin-bottom: 2rem;
-        }
-
-        .form-section h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.875rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .form-group small {
-            display: block;
-            margin-top: 0.25rem;
-            color: var(--gray);
-            font-size: 0.875rem;
-        }
-
-        .checkbox-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-        }
-
-        .checkbox-item input[type="checkbox"] {
-            width: auto;
-            margin-right: 0.75rem;
-            cursor: pointer;
-        }
-
-        .checkbox-item label {
-            margin-bottom: 0;
-            cursor: pointer;
-            font-weight: 400;
-        }
-
-        .estimate-box {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
-            color: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .estimate-box h3 {
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .estimate-amount {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 1rem 0;
-        }
-
-        .estimate-note {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .error-message {
-            color: #dc2626;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
-            display: none;
-        }
-
-        .success-message {
-            background-color: #d1fae5;
-            border-left: 4px solid var(--secondary-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            display: none;
-        }
-
-        .success-message h3 {
-            color: #065f46;
-            margin-bottom: 0.5rem;
-        }
-
-        .success-message p {
-            color: #047857;
-        }
-
-        .page-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
-            color: var(--white);
-            padding: 4rem 0;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .page-header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .radio-group {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-        }
-
-        .radio-item {
-            position: relative;
-        }
-
-        .radio-item input[type="radio"] {
-            position: absolute;
-            opacity: 0;
-        }
-
-        .radio-item label {
-            display: block;
-            padding: 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .radio-item input[type="radio"]:checked + label {
-            border-color: var(--primary-color);
-            background-color: #eff6ff;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .radio-item label:hover {
-            border-color: var(--primary-color);
-        }
-    </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-P8QQXMKH"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header/Navbar -->
     <header class="header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navigazione principale">
             <div class="container">
                 <div class="nav-brand">
                     <h1>Marco Baldi - Imbianchino</h1>
@@ -216,7 +44,7 @@
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu" id="navMenu">
+                <ul class="nav-menu" id="navMenu" role="list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="servizi.html">Servizi</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
@@ -252,33 +80,33 @@
                     <p class="estimate-note">Questa è una stima approssimativa. Il preventivo definitivo verrà fornito dopo un sopralluogo gratuito.</p>
                 </div>
 
-                <form id="preventivoForm">
+                <form id="preventivoForm" novalidate>
                     <!-- Dati Personali -->
                     <div class="form-section">
                         <h3>📋 I Tuoi Dati</h3>
                         
                         <div class="form-group">
                             <label for="nome">Nome e Cognome *</label>
-                            <input type="text" id="nome" name="nome" required>
+                            <input type="text" id="nome" name="nome" required autocomplete="name">
                             <span class="error-message" id="nomeError">Inserisci il tuo nome</span>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required autocomplete="email">
                             <span class="error-message" id="emailError">Inserisci un'email valida</span>
                         </div>
 
                         <div class="form-group">
                             <label for="telefono">Telefono *</label>
-                            <input type="tel" id="telefono" name="telefono" required>
+                            <input type="tel" id="telefono" name="telefono" required autocomplete="tel">
                             <small>Preferibilmente cellulare per WhatsApp</small>
                             <span class="error-message" id="telefonoError">Inserisci un numero di telefono valido</span>
                         </div>
 
                         <div class="form-group">
                             <label for="citta">Città *</label>
-                            <input type="text" id="citta" name="citta" required>
+                            <input type="text" id="citta" name="citta" required autocomplete="address-level2">
                             <span class="error-message" id="cittaError">Inserisci la città</span>
                         </div>
                     </div>
@@ -370,7 +198,7 @@
 
                         <div class="form-group">
                             <label for="note">Note Aggiuntive</label>
-                            <textarea id="note" name="note" placeholder="Descrivi eventuali lavori particolari, problemi da risolvere, tue preferenze..."></textarea>
+                            <textarea id="note" name="note" class="preventivo-textarea" placeholder="Descrivi eventuali lavori particolari, problemi da risolvere, tue preferenze..."></textarea>
                         </div>
                     </div>
 
@@ -400,7 +228,7 @@
                     <h3 style="margin-bottom: 1rem;">Preferisci Parlare Direttamente?</h3>
                     <div class="cta-buttons">
                         <a href="tel:+393384531102" class="btn btn-secondary">📞 Chiamami</a>
-                        <a href="https://wa.me/393XXXXXXXXX" class="btn btn-whatsapp" target="_blank">📱 WhatsApp</a>
+                        <a href="https://wa.me/393384531102" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">📱 WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -431,10 +259,19 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Marco Baldi - Imbianchino. Tutti i diritti riservati.</p>
+                <p>&copy; 2026 Marco Baldi - Imbianchino. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/393384531102" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contattaci su WhatsApp">
+        💬
+        <span class="floating-whatsapp-tooltip">Scrivimi su WhatsApp</span>
+    </a>
+
+    <!-- Scroll to top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Torna in cima">↑</button>
 
     <script src="script.js"></script>
     <script src="preventivo.js"></script>

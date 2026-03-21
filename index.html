@@ -19,7 +19,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marco Baldi - Imbianchino Professionista | Monsummano Terme</title>
     <meta name="description" content="Imbianchino professionista a Monsummano Terme e provincia di Pistoia. Tinteggiatura, decorazioni e manutenzione verde. Preventivo gratuito.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Marco Baldi - Imbianchino Professionista | Monsummano Terme">
+    <meta property="og:description" content="Imbianchino professionista a Monsummano Terme e provincia di Pistoia. Tinteggiatura, decorazioni e manutenzione verde. Preventivo gratuito.">
+    <meta property="og:url" content="https://marco-imbianchino.pages.dev/">
+    <meta property="og:site_name" content="Marco Baldi Imbianchino">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Marco Baldi - Imbianchino Professionista | Monsummano Terme">
+    <meta name="twitter:description" content="Imbianchino professionista a Monsummano Terme. Preventivo gratuito.">
+    <link rel="canonical" href="https://marco-imbianchino.pages.dev/">
     <link rel="stylesheet" href="style.css">
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Marco Baldi - Imbianchino",
+      "description": "Servizi professionali di imbiancatura, decorazioni e manutenzione verde a Monsummano Terme e provincia di Pistoia.",
+      "telephone": "+393384531102",
+      "email": "marco.baldi.24@gmail.com",
+      "url": "https://marco-imbianchino.pages.dev/",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia di Pistoia"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Monsummano Terme",
+        "addressRegion": "PT",
+        "addressCountry": "IT"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "priceRange": "€€",
+      "sameAs": []
+    }
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -28,7 +76,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <!-- Header/Navbar -->
     <header class="header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navigazione principale">
             <div class="container">
                 <div class="nav-brand">
                     <h1>Marco Baldi - Imbianchino</h1>
@@ -38,7 +86,7 @@
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu" id="navMenu">
+                <ul class="nav-menu" id="navMenu" role="list">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="servizi.html">Servizi</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
@@ -58,7 +106,7 @@
                 <p class="hero-subtitle">Tinteggiatura, decorazioni e manutenzione verde.<br>Qualità artigianale, prezzi onesti.</p>
                 <div class="hero-buttons">
                     <a href="preventivo.html" class="btn btn-primary btn-large">Richiedi Preventivo Gratuito</a>
-                    <a href="https://wa.me/393384531102" class="btn btn-whatsapp btn-large" target="_blank">
+                    <a href="https://wa.me/393384531102" class="btn btn-whatsapp btn-large" target="_blank" rel="noopener noreferrer">
                         <span class="whatsapp-icon">💬</span> WhatsApp
                     </a>
                 </div>
@@ -71,19 +119,19 @@
         <div class="container">
             <h2 class="section-title">I Miei Servizi</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">🎨</div>
                     <h3>Imbiancatura</h3>
                     <p>Tinteggiatura interna ed esterna con prodotti di alta qualità. Pareti, soffitti, facciate e finiture in legno.</p>
                     <a href="servizi.html#imbiancatura" class="btn btn-outline" style="margin-top: 1rem;">Scopri di più</a>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">✨</div>
                     <h3>Decorazioni</h3>
                     <p>Stucco veneziano, spatolato, velatura ed effetti speciali per ambienti unici e personalizzati.</p>
                     <a href="servizi.html#decorazioni" class="btn btn-outline" style="margin-top: 1rem;">Scopri di più</a>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">🌿</div>
                     <h3>Manutenzione Verde</h3>
                     <p>Cura di giardini e aree verdi: taglio prato, potatura siepi e alberi, sistemazione aiuole.</p>
@@ -101,25 +149,67 @@
         <div class="container">
             <h2 class="section-title">Perché Scegliermi</h2>
             <div class="features-grid">
-                <div class="feature">
+                <div class="feature fade-in">
                     <div class="feature-icon">⭐</div>
                     <h3>Qualità Garantita</h3>
                     <p>Utilizzo solo prodotti certificati di prima scelta per risultati duraturi nel tempo.</p>
                 </div>
-                <div class="feature">
+                <div class="feature fade-in">
                     <div class="feature-icon">🏆</div>
                     <h3>Esperienza</h3>
                     <p>Anni di esperienza nel settore, con centinaia di lavori completati con soddisfazione del cliente.</p>
                 </div>
-                <div class="feature">
+                <div class="feature fade-in">
                     <div class="feature-icon">⏰</div>
                     <h3>Puntualità</h3>
                     <p>Rispetto dei tempi concordati. Il tuo progetto verrà completato entro le scadenze stabilite.</p>
                 </div>
-                <div class="feature">
+                <div class="feature fade-in">
                     <div class="feature-icon">💰</div>
                     <h3>Prezzi Onesti</h3>
                     <p>Preventivi gratuiti e trasparenti. Nessuna sorpresa in fattura, il prezzo concordato è quello finale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Cosa Dicono i Clienti</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Marco ha tinteggiato tutto il nostro appartamento in modo impeccabile. Puntuale, preciso e sempre disponibile. Lo consiglierò sicuramente ad amici e parenti!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">LR</div>
+                        <div>
+                            <div class="testimonial-name">Laura R.</div>
+                            <div class="testimonial-location">Monsummano Terme</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Ottimo lavoro! Ha rifatto la facciata esterna della mia villetta. Lavoro pulito, materiali di qualità e rispettati i tempi. Davvero soddisfatto."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MF</div>
+                        <div>
+                            <div class="testimonial-name">Marco F.</div>
+                            <div class="testimonial-location">Pescia</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Ha realizzato uno spatolato veneziano stupendo nel nostro ingresso. Professionale, creativo e con ottimo rapporto qualità-prezzo. Top!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SB</div>
+                        <div>
+                            <div class="testimonial-name">Serena B.</div>
+                            <div class="testimonial-location">Montecatini Terme</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -165,6 +255,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/393384531102" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contattaci su WhatsApp">
+        💬
+        <span class="floating-whatsapp-tooltip">Scrivimi su WhatsApp</span>
+    </a>
+
+    <!-- Scroll to top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Torna in cima">↑</button>
 
     <script src="script.js"></script>
 </body>
