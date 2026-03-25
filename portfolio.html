@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -27,6 +27,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Marco Baldi - Imbianchino</title>
     <meta name="description" content="Guarda i miei lavori di imbiancatura, decorazione e manutenzione verde. Portfolio fotografico dei progetti realizzati.">
+    <link rel="canonical" href="https://marco-imbianchino.pages.dev/portfolio.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marco-imbianchino.pages.dev/portfolio.html">
+    <meta property="og:title" content="Portfolio - Marco Baldi - Imbianchino">
+    <meta property="og:description" content="Guarda i miei lavori di imbiancatura, decorazione e manutenzione verde a Monsummano Terme.">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Marco Baldi Imbianchino">
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="stylesheet" href="style.css">
     <style>
         .portfolio-grid {
@@ -154,22 +164,24 @@
     </style>
 </head>
 <body>
+    <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
+
     <!-- Header/Navbar -->
     <header class="header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navigazione principale">
             <div class="container">
                 <div class="nav-brand">
-                    <h1>Marco Baldi - Imbianchino</h1>
+                    <a href="index.html" style="text-decoration:none;"><h1>Marco Baldi - Imbianchino</h1></a>
                 </div>
-                <button class="nav-toggle" id="navToggle">
+                <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu" id="navMenu">
+                <ul class="nav-menu" id="navMenu" role="list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="servizi.html">Servizi</a></li>
-                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="portfolio.html" class="active" aria-current="page">Portfolio</a></li>
                     <li><a href="preventivo.html">Preventivo</a></li>
                     <li><a href="contatti.html">Contatti</a></li>
                 </ul>
@@ -177,6 +189,7 @@
         </nav>
     </header>
 
+    <main id="main-content">
     <!-- Page Header -->
     <div class="page-header">
         <div class="container">
@@ -186,147 +199,147 @@
     </div>
 
     <!-- Portfolio Content -->
-    <section>
+    <section aria-label="Galleria lavori">
         <div class="container">
             <!-- Nota Informativa -->
-            <div class="placeholder-note">
-                <h3>📸 Galleria Lavori</h3>
+            <div class="placeholder-note" role="note">
+                <h2>📸 Galleria Lavori</h2>
                 <p>Le immagini mostrate rappresentano il tipo di lavori che eseguo. Contattami per vedere foto specifiche dei miei progetti o per discutere il tuo prossimo lavoro.</p>
             </div>
 
             <!-- Filtri Categoria -->
-            <div class="category-filter">
-                <button class="filter-btn active" data-category="tutti">Tutti</button>
-                <button class="filter-btn" data-category="imbiancatura">Imbiancatura</button>
-                <button class="filter-btn" data-category="decorazioni">Decorazioni</button>
-                <button class="filter-btn" data-category="verde">Manutenzione Verde</button>
+            <div class="category-filter" role="group" aria-label="Filtra per categoria">
+                <button class="filter-btn active" data-category="tutti" aria-pressed="true">Tutti</button>
+                <button class="filter-btn" data-category="imbiancatura" aria-pressed="false">Imbiancatura</button>
+                <button class="filter-btn" data-category="decorazioni" aria-pressed="false">Decorazioni</button>
+                <button class="filter-btn" data-category="verde" aria-pressed="false">Manutenzione Verde</button>
             </div>
 
             <!-- Portfolio Grid -->
-            <div class="portfolio-grid">
+            <div class="portfolio-grid" role="list" aria-label="Progetti realizzati">
                 <!-- Imbiancatura Items -->
-                <div class="portfolio-item" data-category="imbiancatura">
+                <article class="portfolio-item" data-category="imbiancatura" role="listitem">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop" alt="Imbiancatura appartamento">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop" alt="Tinteggiatura completa di un appartamento nel centro storico" loading="lazy" width="800" height="600">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Appartamento Centro Storico</h3>
                         <p>Tinteggiatura completa 3 camere + bagno</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-item" data-category="imbiancatura">
+                <article class="portfolio-item" data-category="imbiancatura" role="listitem">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&h=600&fit=crop" alt="Villetta bifamiliare">
+                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&h=600&fit=crop" alt="Pittura facciata esterna e interni di una villetta bifamiliare" loading="lazy" width="800" height="600">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Villetta Bifamiliare</h3>
                         <p>Facciata esterna e interni completi</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-item" data-category="imbiancatura">
+                <article class="portfolio-item" data-category="imbiancatura" role="listitem">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800&h=600&fit=crop" alt="Ufficio commerciale">
+                        <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800&h=600&fit=crop" alt="Tinteggiatura ufficio commerciale con 5 stanze e reception" loading="lazy" width="800" height="600">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Ufficio Commerciale</h3>
                         <p>Tinteggiatura 5 stanze + reception</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Decorazioni Items -->
-                <div class="portfolio-item" data-category="decorazioni">
+                <article class="portfolio-item" data-category="decorazioni" role="listitem">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&h=600&fit=crop" alt="Soggiorno moderno">
+                        <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&h=600&fit=crop" alt="Spatolato veneziano su parete feature di un soggiorno moderno" loading="lazy" width="800" height="600">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Soggiorno Moderno</h3>
                         <p>Spatolato veneziano parete feature</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-item" data-category="decorazioni">
+                <article class="portfolio-item" data-category="decorazioni" role="listitem">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop" alt="Camera da letto">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop" alt="Effetto velatura su pareti camera da letto" loading="lazy" width="800" height="600">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Camera da Letto</h3>
                         <p>Effetto velatura su pareti</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-item" data-category="decorazioni">
+                <article class="portfolio-item" data-category="decorazioni" role="listitem">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" alt="Ingresso signorile">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" alt="Stucco veneziano effetto marmo in ingresso signorile" loading="lazy" width="800" height="600">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Ingresso Signorile</h3>
                         <p>Stucco veneziano effetto marmo</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Manutenzione Verde Items -->
-                <div class="portfolio-item" data-category="verde">
+                <article class="portfolio-item" data-category="verde" role="listitem">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&h=600&fit=crop" alt="Giardino privato">
+                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&h=600&fit=crop" alt="Potatura siepi e pulizia aiuole in giardino privato" loading="lazy" width="800" height="600">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Giardino Privato</h3>
                         <p>Potatura siepi e pulizia aiuole</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-item" data-category="verde">
+                <article class="portfolio-item" data-category="verde" role="listitem">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop" alt="Parco condominiale">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop" alt="Manutenzione ordinaria mensile parco condominiale" loading="lazy" width="800" height="600">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Parco Condominiale</h3>
                         <p>Manutenzione ordinaria mensile</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-item" data-category="verde">
+                <article class="portfolio-item" data-category="verde" role="listitem">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1588420343618-6141b3784bce?w=800&h=600&fit=crop" alt="Giardino villa">
+                        <img src="https://images.unsplash.com/photo-1588420343618-6141b3784bce?w=800&h=600&fit=crop" alt="Sistemazione completa area verde giardino villa" loading="lazy" width="800" height="600">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Giardino Villa</h3>
                         <p>Sistemazione completa area verde</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Mixed Items -->
-                <div class="portfolio-item" data-category="imbiancatura">
+                <article class="portfolio-item" data-category="imbiancatura" role="listitem">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop" alt="Condominio scale">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop" alt="Tinteggiatura scale e parti comuni condominio 8 unità" loading="lazy" width="800" height="600">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Condominio 8 Unità</h3>
                         <p>Tinteggiatura scale e parti comuni</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-item" data-category="decorazioni">
+                <article class="portfolio-item" data-category="decorazioni" role="listitem">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop" alt="Salone ristorante">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop" alt="Decorazioni pareti tematiche salone ristorante" loading="lazy" width="800" height="600">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Salone Ristorante</h3>
                         <p>Decorazioni pareti tematiche</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-item" data-category="imbiancatura">
+                <article class="portfolio-item" data-category="imbiancatura" role="listitem">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&h=600&fit=crop" alt="Ristrutturazione bagno">
+                        <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&h=600&fit=crop" alt="Pittura antimuffa e finiture ristrutturazione bagno" loading="lazy" width="800" height="600">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Ristrutturazione Bagno</h3>
                         <p>Pittura antimuffa e finiture</p>
                     </div>
-                </div>
+                </article>
             </div>
 
             <!-- CTA -->
@@ -340,6 +353,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -365,7 +379,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Marco Baldi - Imbianchino. Tutti i diritti riservati.</p>
+                <p>&copy; 2026 Marco Baldi - Imbianchino. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>
@@ -379,9 +393,13 @@
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 // Rimuovi active da tutti
-                filterBtns.forEach(b => b.classList.remove('active'));
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-pressed', 'false');
+                });
                 // Aggiungi active al bottone cliccato
                 btn.classList.add('active');
+                btn.setAttribute('aria-pressed', 'true');
 
                 const category = btn.dataset.category;
 

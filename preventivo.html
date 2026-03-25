@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -12,6 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richiedi Preventivo - Marco Baldi - Imbianchino</title>
     <meta name="description" content="Richiedi un preventivo gratuito e senza impegno per i tuoi lavori di imbiancatura e manutenzione verde.">
+    <link rel="canonical" href="https://marco-imbianchino.pages.dev/preventivo.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marco-imbianchino.pages.dev/preventivo.html">
+    <meta property="og:title" content="Richiedi Preventivo Gratuito - Marco Baldi Imbianchino">
+    <meta property="og:description" content="Richiedi un preventivo gratuito e senza impegno per i tuoi lavori di imbiancatura e manutenzione verde a Monsummano Terme.">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Marco Baldi Imbianchino">
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="stylesheet" href="style.css">
     <style>
         .form-container {
@@ -204,29 +214,32 @@
     </style>
 </head>
 <body>
+    <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
+
     <!-- Header/Navbar -->
     <header class="header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navigazione principale">
             <div class="container">
                 <div class="nav-brand">
-                    <h1>Marco Baldi - Imbianchino</h1>
+                    <a href="index.html" style="text-decoration:none;"><h1>Marco Baldi - Imbianchino</h1></a>
                 </div>
-                <button class="nav-toggle" id="navToggle">
+                <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu" id="navMenu">
+                <ul class="nav-menu" id="navMenu" role="list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="servizi.html">Servizi</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="preventivo.html" class="active">Preventivo</a></li>
+                    <li><a href="preventivo.html" class="active" aria-current="page">Preventivo</a></li>
                     <li><a href="contatti.html">Contatti</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <main id="main-content">
     <!-- Page Header -->
     <div class="page-header">
         <div class="container">
@@ -236,75 +249,80 @@
     </div>
 
     <!-- Form Content -->
-    <section>
+    <section aria-label="Modulo preventivo">
         <div class="container">
             <div class="form-container">
                 <!-- Success Message -->
-                <div class="success-message" id="successMessage">
+                <div class="success-message" id="successMessage" role="alert" aria-live="polite">
                     <h3>✓ Richiesta Inviata!</h3>
                     <p>Grazie per la tua richiesta. Ti contatterò al più presto per discutere i dettagli del progetto.</p>
                 </div>
 
                 <!-- Estimate Box -->
-                <div class="estimate-box" id="estimateBox" style="display: none;">
+                <div class="estimate-box" id="estimateBox" style="display: none;" aria-live="polite">
                     <h3>Stima Indicativa</h3>
                     <div class="estimate-amount" id="estimateAmount">€ 0</div>
                     <p class="estimate-note">Questa è una stima approssimativa. Il preventivo definitivo verrà fornito dopo un sopralluogo gratuito.</p>
                 </div>
 
-                <form id="preventivoForm">
+                <form id="preventivoForm" action="https://formsubmit.co/marco.baldi.24@gmail.com" method="POST" novalidate>
+                    <!-- FormSubmit hidden fields -->
+                    <input type="hidden" name="_subject" value="Nuova Richiesta Preventivo - Marco Baldi Imbianchino">
+                    <input type="hidden" name="_next" value="https://marco-imbianchino.pages.dev/preventivo.html?inviato=1">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
                     <!-- Dati Personali -->
                     <div class="form-section">
-                        <h3>📋 I Tuoi Dati</h3>
+                        <h3><span aria-hidden="true">📋</span> I Tuoi Dati</h3>
                         
                         <div class="form-group">
                             <label for="nome">Nome e Cognome *</label>
-                            <input type="text" id="nome" name="nome" required>
-                            <span class="error-message" id="nomeError">Inserisci il tuo nome</span>
+                            <input type="text" id="nome" name="nome" required autocomplete="name" aria-required="true">
+                            <span class="error-message" id="nomeError" role="alert">Inserisci il tuo nome</span>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                            <span class="error-message" id="emailError">Inserisci un'email valida</span>
+                            <input type="email" id="email" name="email" required autocomplete="email" aria-required="true">
+                            <span class="error-message" id="emailError" role="alert">Inserisci un'email valida</span>
                         </div>
 
                         <div class="form-group">
                             <label for="telefono">Telefono *</label>
-                            <input type="tel" id="telefono" name="telefono" required>
+                            <input type="tel" id="telefono" name="telefono" required autocomplete="tel" aria-required="true">
                             <small>Preferibilmente cellulare per WhatsApp</small>
-                            <span class="error-message" id="telefonoError">Inserisci un numero di telefono valido</span>
+                            <span class="error-message" id="telefonoError" role="alert">Inserisci un numero di telefono valido</span>
                         </div>
 
                         <div class="form-group">
                             <label for="citta">Città *</label>
-                            <input type="text" id="citta" name="citta" required>
-                            <span class="error-message" id="cittaError">Inserisci la città</span>
+                            <input type="text" id="citta" name="citta" required autocomplete="address-level2" aria-required="true">
+                            <span class="error-message" id="cittaError" role="alert">Inserisci la città</span>
                         </div>
                     </div>
 
                     <!-- Tipo di Servizio -->
                     <div class="form-section">
-                        <h3>🎯 Che Servizio Ti Interessa?</h3>
+                        <h3><span aria-hidden="true">🎯</span> Che Servizio Ti Interessa?</h3>
                         
                         <div class="form-group">
                             <label>Seleziona il servizio *</label>
-                            <div class="radio-group">
+                            <div class="radio-group" role="radiogroup" aria-label="Tipo di servizio">
                                 <div class="radio-item">
                                     <input type="radio" id="imbiancatura" name="servizio" value="imbiancatura" required>
-                                    <label for="imbiancatura">🎨 Imbiancatura</label>
+                                    <label for="imbiancatura"><span aria-hidden="true">🎨</span> Imbiancatura</label>
                                 </div>
                                 <div class="radio-item">
                                     <input type="radio" id="decorazioni" name="servizio" value="decorazioni">
-                                    <label for="decorazioni">✨ Decorazioni</label>
+                                    <label for="decorazioni"><span aria-hidden="true">✨</span> Decorazioni</label>
                                 </div>
                                 <div class="radio-item">
                                     <input type="radio" id="verde" name="servizio" value="verde">
-                                    <label for="verde">🌿 Manutenzione Verde</label>
+                                    <label for="verde"><span aria-hidden="true">🌿</span> Manutenzione Verde</label>
                                 </div>
                                 <div class="radio-item">
                                     <input type="radio" id="multiplo" name="servizio" value="multiplo">
-                                    <label for="multiplo">🔧 Più Servizi</label>
+                                    <label for="multiplo"><span aria-hidden="true">🔧</span> Più Servizi</label>
                                 </div>
                             </div>
                         </div>
@@ -312,7 +330,7 @@
 
                     <!-- Dettagli Progetto -->
                     <div class="form-section">
-                        <h3>📐 Dettagli del Progetto</h3>
+                        <h3><span aria-hidden="true">📐</span> Dettagli del Progetto</h3>
                         
                         <div class="form-group">
                             <label for="tipologia">Tipologia Immobile</label>
@@ -338,7 +356,7 @@
 
                         <div class="form-group">
                             <label>Cosa Includere?</label>
-                            <div class="checkbox-group">
+                            <div class="checkbox-group" role="group" aria-label="Lavori da includere">
                                 <div class="checkbox-item">
                                     <input type="checkbox" id="pareti" name="lavori[]" value="pareti">
                                     <label for="pareti">Pareti</label>
@@ -377,10 +395,10 @@
                     <!-- Privacy -->
                     <div class="form-section">
                         <div class="checkbox-item">
-                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <input type="checkbox" id="privacy" name="privacy" required aria-required="true">
                             <label for="privacy">Accetto che i miei dati vengano utilizzati per ricevere il preventivo richiesto *</label>
                         </div>
-                        <span class="error-message" id="privacyError">Devi accettare per procedere</span>
+                        <span class="error-message" id="privacyError" role="alert">Devi accettare per procedere</span>
                     </div>
 
                     <!-- Submit -->
@@ -399,13 +417,14 @@
                 <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--light);">
                     <h3 style="margin-bottom: 1rem;">Preferisci Parlare Direttamente?</h3>
                     <div class="cta-buttons">
-                        <a href="tel:+393384531102" class="btn btn-secondary">📞 Chiamami</a>
-                        <a href="https://wa.me/393XXXXXXXXX" class="btn btn-whatsapp" target="_blank">📱 WhatsApp</a>
+                        <a href="tel:+393384531102" class="btn btn-secondary" aria-label="Chiama Marco Baldi">📞 Chiamami</a>
+                        <a href="https://wa.me/393384531102" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contattami su WhatsApp">📱 WhatsApp</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -431,7 +450,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Marco Baldi - Imbianchino. Tutti i diritti riservati.</p>
+                <p>&copy; 2026 Marco Baldi - Imbianchino. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>

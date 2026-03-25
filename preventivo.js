@@ -5,6 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!form) return;
 
+    // Mostra messaggio successo se pagina aperta post-invio
+    if (window.location.search.indexOf('inviato=1') !== -1) {
+        if (form) form.style.display = 'none';
+        if (estimateBox) estimateBox.style.display = 'none';
+        if (successMessage) {
+            successMessage.style.display = 'block';
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        return;
+    }
+
     // Listener submit con validazione
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -59,26 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        inviaPreventivo();
-    });
-
-    function inviaPreventivo() {
-        // 1. Raccolta dati form
-        const formData = {
-            nome: document.getElementById('nome').value,
-            email: document.getElementById('email').value,
-            telefono: document.getElementById('telefono').value,
-            citta: document.getElementById('citta').value,
-            servizio: document.querySelector('input[name="servizio"]:checked')?.value,
-            tipologia: document.getElementById('tipologia').value,
-            metratura: document.getElementById('metratura').value,
-            stanze: document.getElementById('stanze').value,
-            lavori: Array.from(document.querySelectorAll('input[name="lavori[]"]:checked')).map(cb => cb.value),
-            urgenza: document.getElementById('urgenza').value,
-            note: document.getElementById('note').value
-        };
-
-        // 2. Tracciamento Conversione GA4
+        // Tracciamento GA4 prima dell'invio
         if (typeof gtag === 'function') {
             const amountText = estimateBox && estimateBox.style.display !== 'none'
                 ? document.getElementById('estimateAmount').textContent
@@ -88,24 +80,13 @@ document.addEventListener('DOMContentLoaded', function() {
             gtag('event', 'generate_lead', {
                 'currency': 'EUR',
                 'value': value,
-                'item_category': formData.servizio
+                'item_category': document.querySelector('input[name="servizio"]:checked')?.value
             });
         }
 
-        // 3. Gestione visiva successo
-        form.style.display = 'none';
-        if (estimateBox) estimateBox.style.display = 'none';
-        successMessage.style.display = 'block';
-        successMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-        // 4. Opzione WhatsApp
-        const messaggioWA = creaMessaggioWhatsApp(formData);
-        setTimeout(() => {
-            if (confirm('Vuoi inviare la richiesta anche su WhatsApp per una risposta immediata?')) {
-                window.open('https://wa.me/393384531102?text=' + encodeURIComponent(messaggioWA), '_blank');
-            }
-        }, 1500);
-    }
+        // Invia il form a FormSubmit.co
+        form.submit();
+    });
 
     function creaMessaggioWhatsApp(data) {
         const lavori = data.lavori.length > 0 ? data.lavori.join(', ') : 'Non specificati';
