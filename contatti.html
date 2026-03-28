@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <!-- Google Tag Manager (deferred) -->
+    <script>
+        window.addEventListener('load', function() {
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GT-P8QQXMKH');
+        });
+    </script>
+    <!-- End Google Tag Manager -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -23,156 +34,13 @@
     <!-- Preconnect -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .contact-info {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: start;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background-color: var(--light);
-            border-radius: 8px;
-        }
-
-        .contact-icon {
-            font-size: 2rem;
-            margin-right: 1rem;
-            min-width: 40px;
-        }
-
-        .contact-details h3 {
-            margin-bottom: 0.5rem;
-            color: var(--dark);
-        }
-
-        .contact-details p {
-            color: var(--gray);
-            margin: 0;
-        }
-
-        .contact-details a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-details a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-form {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-        }
-
-        .contact-form h2 {
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.875rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .page-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
-            color: var(--white);
-            padding: 4rem 0;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .page-header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .orari-box {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #059669 100%);
-            color: var(--white);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-        }
-
-        .orari-box h3 {
-            margin-bottom: 1rem;
-        }
-
-        .orari-box p {
-            margin: 0.5rem 0;
-            opacity: 0.95;
-        }
-
-        .success-message {
-            background-color: #d1fae5;
-            border-left: 4px solid var(--secondary-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            display: none;
-        }
-
-        .success-message h3 {
-            color: #065f46;
-            margin-bottom: 0.5rem;
-        }
-
-        .success-message p {
-            color: #047857;
-        }
-    </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-P8QQXMKH"
+    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
 
     <!-- Header/Navbar -->
@@ -180,7 +48,7 @@
         <nav class="navbar" aria-label="Navigazione principale">
             <div class="container">
                 <div class="nav-brand">
-                    <a href="index.html" style="text-decoration:none;"><h1>Marco Baldi - Imbianchino</h1></a>
+                    <a href="index.html"><h1>Marco Baldi - Imbianchino</h1></a>
                 </div>
                 <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
@@ -214,14 +82,14 @@
                 <!-- Informazioni Contatto -->
                 <div>
                     <div class="contact-info">
-                        <h2 style="margin-bottom: 1.5rem;">Come Contattarmi</h2>
+                        <h2>Come Contattarmi</h2>
 
                         <div class="contact-item">
                             <div class="contact-icon" aria-hidden="true">📱</div>
                             <div class="contact-details">
                                 <h3>Telefono</h3>
                                 <p><a href="tel:+393384531102" aria-label="Chiama +39 338 453 1102">+39 338 453 1102</a></p>
-                                <small style="color: var(--gray);">Chiamami dal lunedì al sabato, 8:00-19:00</small>
+                                <small>Chiamami dal lunedì al sabato, 8:00-19:00</small>
                             </div>
                         </div>
 
@@ -230,7 +98,7 @@
                             <div class="contact-details">
                                 <h3>Email</h3>
                                 <p><a href="mailto:marco.baldi.24@gmail.com">marco.baldi.24@gmail.com</a></p>
-                                <small style="color: var(--gray);">Rispondo entro 24 ore</small>
+                                <small>Rispondo entro 24 ore</small>
                             </div>
                         </div>
 
@@ -239,7 +107,7 @@
                             <div class="contact-details">
                                 <h3>WhatsApp</h3>
                                 <p><a href="https://wa.me/393384531102" target="_blank" rel="noopener noreferrer" aria-label="Invia messaggio WhatsApp a Marco Baldi">Invia Messaggio</a></p>
-                                <small style="color: var(--gray);">Il modo più veloce per ricevere risposta</small>
+                                <small>Il modo più veloce per ricevere risposta</small>
                             </div>
                         </div>
 
@@ -248,7 +116,7 @@
                             <div class="contact-details">
                                 <h3>Zona Operativa</h3>
                                 <p>Monsummano Terme e Provincia di Pistoia</p>
-                                <small style="color: var(--gray);">Disponibile anche per zone limitrofe</small>
+                                <small>Disponibile anche per zone limitrofe</small>
                             </div>
                         </div>
 
@@ -257,7 +125,7 @@
                             <p><strong>Lunedì - Venerdì:</strong> 8:00 - 19:00</p>
                             <p><strong>Sabato:</strong> 9:00 - 13:00</p>
                             <p><strong>Domenica:</strong> Chiuso</p>
-                            <small style="display: block; margin-top: 0.5rem; opacity: 0.9;">*Sopralluoghi su appuntamento anche in altri orari</small>
+                            <small>*Sopralluoghi su appuntamento anche in altri orari</small>
                         </div>
                     </div>
                 </div>
@@ -271,7 +139,7 @@
                         </div>
 
                         <h2>Invia un Messaggio</h2>
-                        <p style="color: var(--gray); margin-bottom: 1.5rem;">Compila il form e ti contatterò entro 24 ore</p>
+                        <p class="form-subtitle">Compila il form e ti contatterò entro 24 ore</p>
 
                         <form id="contactForm" action="https://formsubmit.co/marco.baldi.24@gmail.com" method="POST" novalidate>
                             <!-- FormSubmit hidden fields -->
@@ -305,14 +173,14 @@
                                 <textarea id="messaggio" name="messaggio" placeholder="Scrivi qui il tuo messaggio..." required aria-required="true"></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                            <button type="submit" class="btn btn-primary btn-large btn-block">
                                 Invia Messaggio
                             </button>
                         </form>
 
-                        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 2px solid var(--light);">
-                            <p style="color: var(--gray); margin-bottom: 1rem;">Oppure contattami direttamente</p>
-                            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <div class="contact-actions">
+                            <p>Oppure contattami direttamente</p>
+                            <div class="contact-actions-buttons">
                                 <a href="tel:+393384531102" class="btn btn-secondary" aria-label="Chiama Marco Baldi">📞 Chiama</a>
                                 <a href="https://wa.me/393384531102" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contattami su WhatsApp">💬 WhatsApp</a>
                             </div>
@@ -354,27 +222,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Mostra messaggio successo se pagina aperta post-invio
-        (function() {
-            if (window.location.search.indexOf('inviato=1') !== -1) {
-                var success = document.getElementById('contactSuccess');
-                var form = document.getElementById('contactForm');
-                if (success && form) {
-                    form.style.display = 'none';
-                    success.style.display = 'block';
-                }
-            }
-        })();
-
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            if (typeof gtag === 'function') {
-                gtag('event', 'generate_lead', {
-                    'method': 'ContactForm',
-                    'event_label': 'Modulo Contatti'
-                });
-            }
-        });
-    </script>
 </body>
 </html>

@@ -87,20 +87,4 @@ document.addEventListener('DOMContentLoaded', function() {
         // Invia il form a FormSubmit.co
         form.submit();
     });
-
-    function creaMessaggioWhatsApp(data) {
-        const lavori = data.lavori.length > 0 ? data.lavori.join(', ') : 'Non specificati';
-        return 'Ciao Marco! Ti invio la mia richiesta di preventivo:\n\n' +
-            '👤 Nome: ' + data.nome + '\n' +
-            '📧 Email: ' + data.email + '\n' +
-            '📱 Telefono: ' + data.telefono + '\n' +
-            '📍 Città: ' + data.citta + '\n\n' +
-            '🎯 Servizio: ' + (data.servizio || 'Non specificato') + '\n' +
-            '🏠 Tipologia: ' + (data.tipologia || 'Non specificata') + '\n' +
-            '📐 Metratura: ' + (data.metratura || 'N/D') + ' mq\n' +
-            '🚪 Stanze: ' + (data.stanze || 'N/D') + '\n' +
-            '🔧 Lavori inclusi: ' + lavori + '\n' +
-            '⏰ Urgenza: ' + (data.urgenza || 'Flessibile') + '\n\n' +
-            '📝 Note: ' + (data.note || 'Nessuna');
-    }
 });

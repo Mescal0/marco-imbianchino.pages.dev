@@ -76,8 +76,8 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = { validateEmail, validatePhone };
 }
 
-// FAQ Accordion
 document.addEventListener('DOMContentLoaded', function() {
+    // FAQ Accordion
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(function(btn) {
         btn.addEventListener('click', function() {
@@ -96,16 +96,76 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
-// Monitoraggio Click sul Telefono (Globale)
-document.addEventListener('DOMContentLoaded', function() {
-    const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-    phoneLinks.forEach(link => {
+
+    // Monitoraggio Click sul Telefono (Globale)
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
         link.addEventListener('click', function() {
             if (typeof gtag === 'function') {
                 gtag('event', 'contact', {
                     'method': 'Phone',
                     'event_label': 'Chiamata Diretta'
+                });
+            }
+        });
+    });
+
+    // Filtro Portfolio
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    if (filterBtns.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-pressed', 'false');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-pressed', 'true');
+
+                const category = btn.dataset.category;
+                portfolioItems.forEach(item => {
+                    item.style.display =
+                        (category === 'tutti' || item.dataset.category === category)
+                            ? 'block'
+                            : 'none';
+                });
+
+                if (typeof gtag === 'function') {
+                    gtag('event', 'select_content', {
+                        'content_type': 'portfolio_category',
+                        'item_id': btn.dataset.category
+                    });
+                }
+            });
+        });
+    }
+
+    // Gestione messaggio successo - pagina Contatti
+    const contactSuccess = document.getElementById('contactSuccess');
+    const contactForm = document.getElementById('contactForm');
+    if (contactSuccess && contactForm) {
+        if (window.location.search.indexOf('inviato=1') !== -1) {
+            contactForm.style.display = 'none';
+            contactSuccess.style.display = 'block';
+        } else {
+            contactForm.addEventListener('submit', function() {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                        'method': 'ContactForm',
+                        'event_label': 'Modulo Contatti'
+                    });
+                }
+            });
+        }
+    }
+
+    // Monitoraggio click pulsanti servizi
+    document.querySelectorAll('.service-detail .btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'select_content', {
+                    'content_type': 'servizio_button',
+                    'item_id': this.textContent.trim()
                 });
             }
         });

@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <!-- Google Tag Manager (deferred) -->
+    <script>
+        window.addEventListener('load', function() {
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GT-P8QQXMKH');
+        });
+    </script>
+    <!-- End Google Tag Manager -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-X4EQ93HGVP');
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    if (typeof gtag === 'function') {
-                        gtag('event', 'select_content', {
-                            'content_type': 'portfolio_category',
-                            'item_id': this.dataset.category
-                        });
-                    }
-                });
-            });
-        });
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,134 +32,16 @@
     <meta property="og:locale" content="it_IT">
     <meta property="og:site_name" content="Marco Baldi Imbianchino">
     <!-- Preconnect -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .portfolio-item {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s, box-shadow 0.3s;
-            background-color: var(--light);
-            aspect-ratio: 4/3;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .portfolio-image {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .portfolio-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .portfolio-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
-            color: var(--white);
-            padding: 1.5rem;
-            transform: translateY(100%);
-            transition: transform 0.3s;
-        }
-
-        .portfolio-item:hover .portfolio-overlay {
-            transform: translateY(0);
-        }
-
-        .portfolio-overlay h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .portfolio-overlay p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .category-filter {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.75rem 1.5rem;
-            border: 2px solid var(--primary-color);
-            background-color: transparent;
-            color: var(--primary-color);
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        .page-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
-            color: var(--white);
-            padding: 4rem 0;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .page-header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .placeholder-note {
-            background-color: #fef3c7;
-            border-left: 4px solid #f59e0b;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 3rem;
-        }
-
-        .placeholder-note h3 {
-            color: #92400e;
-            margin-bottom: 0.5rem;
-        }
-
-        .placeholder-note p {
-            color: #78350f;
-        }
-    </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-P8QQXMKH"
+    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
 
     <!-- Header/Navbar -->
@@ -171,7 +49,7 @@
         <nav class="navbar" aria-label="Navigazione principale">
             <div class="container">
                 <div class="nav-brand">
-                    <a href="index.html" style="text-decoration:none;"><h1>Marco Baldi - Imbianchino</h1></a>
+                    <a href="index.html"><h1>Marco Baldi - Imbianchino</h1></a>
                 </div>
                 <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
@@ -343,9 +221,9 @@
             </div>
 
             <!-- CTA -->
-            <div class="text-center" style="margin-top: 3rem;">
-                <h2 style="margin-bottom: 1rem;">Ti Piace il Mio Lavoro?</h2>
-                <p style="color: var(--gray); margin-bottom: 2rem; font-size: 1.1rem;">Richiedi un preventivo gratuito per il tuo progetto</p>
+            <div class="section-cta">
+                <h2>Ti Piace il Mio Lavoro?</h2>
+                <p>Richiedi un preventivo gratuito per il tuo progetto</p>
                 <div class="cta-buttons">
                     <a href="preventivo.html" class="btn btn-primary btn-large">Richiedi Preventivo</a>
                     <a href="contatti.html" class="btn btn-outline btn-large">Contattami</a>
@@ -385,33 +263,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Filtro Portfolio
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Rimuovi active da tutti
-                filterBtns.forEach(b => {
-                    b.classList.remove('active');
-                    b.setAttribute('aria-pressed', 'false');
-                });
-                // Aggiungi active al bottone cliccato
-                btn.classList.add('active');
-                btn.setAttribute('aria-pressed', 'true');
-
-                const category = btn.dataset.category;
-
-                portfolioItems.forEach(item => {
-                    if (category === 'tutti' || item.dataset.category === category) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
