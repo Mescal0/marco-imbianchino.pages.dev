@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -12,6 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatti - Marco Baldi - Imbianchino</title>
     <meta name="description" content="Contattami per informazioni, preventivi o domande sui servizi di imbiancatura e manutenzione verde.">
+    <link rel="canonical" href="https://marco-imbianchino.pages.dev/contatti.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marco-imbianchino.pages.dev/contatti.html">
+    <meta property="og:title" content="Contatti - Marco Baldi Imbianchino">
+    <meta property="og:description" content="Contattami per informazioni, preventivi o domande. Imbianchino professionista a Monsummano Terme.">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Marco Baldi Imbianchino">
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="stylesheet" href="style.css">
     <style>
         .contact-grid {
@@ -163,29 +173,32 @@
     </style>
 </head>
 <body>
+    <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
+
     <!-- Header/Navbar -->
     <header class="header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navigazione principale">
             <div class="container">
                 <div class="nav-brand">
-                    <h1>Marco Baldi - Imbianchino</h1>
+                    <a href="index.html" style="text-decoration:none;"><h1>Marco Baldi - Imbianchino</h1></a>
                 </div>
-                <button class="nav-toggle" id="navToggle">
+                <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu" id="navMenu">
+                <ul class="nav-menu" id="navMenu" role="list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="servizi.html">Servizi</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="preventivo.html">Preventivo</a></li>
-                    <li><a href="contatti.html" class="active">Contatti</a></li>
+                    <li><a href="contatti.html" class="active" aria-current="page">Contatti</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <main id="main-content">
     <!-- Page Header -->
     <div class="page-header">
         <div class="container">
@@ -195,7 +208,7 @@
     </div>
 
     <!-- Contact Content -->
-    <section>
+    <section aria-label="Informazioni di contatto">
         <div class="container">
             <div class="contact-grid">
                 <!-- Informazioni Contatto -->
@@ -204,16 +217,16 @@
                         <h2 style="margin-bottom: 1.5rem;">Come Contattarmi</h2>
 
                         <div class="contact-item">
-                            <div class="contact-icon">📱</div>
+                            <div class="contact-icon" aria-hidden="true">📱</div>
                             <div class="contact-details">
                                 <h3>Telefono</h3>
-                                <p><a href="tel:+393384531102">+39 338 453 1102</a></p>
+                                <p><a href="tel:+393384531102" aria-label="Chiama +39 338 453 1102">+39 338 453 1102</a></p>
                                 <small style="color: var(--gray);">Chiamami dal lunedì al sabato, 8:00-19:00</small>
                             </div>
                         </div>
 
                         <div class="contact-item">
-                            <div class="contact-icon">📧</div>
+                            <div class="contact-icon" aria-hidden="true">📧</div>
                             <div class="contact-details">
                                 <h3>Email</h3>
                                 <p><a href="mailto:marco.baldi.24@gmail.com">marco.baldi.24@gmail.com</a></p>
@@ -222,16 +235,16 @@
                         </div>
 
                         <div class="contact-item">
-                            <div class="contact-icon">💬</div>
+                            <div class="contact-icon" aria-hidden="true">💬</div>
                             <div class="contact-details">
                                 <h3>WhatsApp</h3>
-                                <p><a href="https://wa.me/393384531102" target="_blank">Invia Messaggio</a></p>
+                                <p><a href="https://wa.me/393384531102" target="_blank" rel="noopener noreferrer" aria-label="Invia messaggio WhatsApp a Marco Baldi">Invia Messaggio</a></p>
                                 <small style="color: var(--gray);">Il modo più veloce per ricevere risposta</small>
                             </div>
                         </div>
 
                         <div class="contact-item">
-                            <div class="contact-icon">📍</div>
+                            <div class="contact-icon" aria-hidden="true">📍</div>
                             <div class="contact-details">
                                 <h3>Zona Operativa</h3>
                                 <p>Monsummano Terme e Provincia di Pistoia</p>
@@ -239,8 +252,8 @@
                             </div>
                         </div>
 
-                        <div class="orari-box">
-                            <h3>⏰ Orari</h3>
+                        <div class="orari-box" aria-label="Orari di disponibilità">
+                            <h3><span aria-hidden="true">⏰</span> Orari</h3>
                             <p><strong>Lunedì - Venerdì:</strong> 8:00 - 19:00</p>
                             <p><strong>Sabato:</strong> 9:00 - 13:00</p>
                             <p><strong>Domenica:</strong> Chiuso</p>
@@ -252,7 +265,7 @@
                 <!-- Form Contatto -->
                 <div>
                     <div class="contact-form">
-                        <div class="success-message" id="contactSuccess">
+                        <div class="success-message" id="contactSuccess" role="alert" aria-live="polite">
                             <h3>✓ Messaggio Inviato!</h3>
                             <p>Grazie per avermi contattato. Ti risponderò al più presto.</p>
                         </div>
@@ -260,30 +273,36 @@
                         <h2>Invia un Messaggio</h2>
                         <p style="color: var(--gray); margin-bottom: 1.5rem;">Compila il form e ti contatterò entro 24 ore</p>
 
-                        <form id="contactForm">
+                        <form id="contactForm" action="https://formsubmit.co/marco.baldi.24@gmail.com" method="POST" novalidate>
+                            <!-- FormSubmit hidden fields -->
+                            <input type="hidden" name="_subject" value="Nuovo Messaggio - Marco Baldi Imbianchino">
+                            <input type="hidden" name="_next" value="https://marco-imbianchino.pages.dev/contatti.html?inviato=1">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+
                             <div class="form-group">
                                 <label for="nome">Nome e Cognome *</label>
-                                <input type="text" id="nome" name="nome" required>
+                                <input type="text" id="nome" name="nome" required autocomplete="name" aria-required="true">
                             </div>
 
                             <div class="form-group">
                                 <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" required autocomplete="email" aria-required="true">
                             </div>
 
                             <div class="form-group">
                                 <label for="telefono">Telefono</label>
-                                <input type="tel" id="telefono" name="telefono">
+                                <input type="tel" id="telefono" name="telefono" autocomplete="tel">
                             </div>
 
                             <div class="form-group">
                                 <label for="oggetto">Oggetto *</label>
-                                <input type="text" id="oggetto" name="oggetto" placeholder="es. Richiesta informazioni imbiancatura" required>
+                                <input type="text" id="oggetto" name="oggetto" placeholder="es. Richiesta informazioni imbiancatura" required aria-required="true">
                             </div>
 
                             <div class="form-group">
                                 <label for="messaggio">Messaggio *</label>
-                                <textarea id="messaggio" name="messaggio" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+                                <textarea id="messaggio" name="messaggio" placeholder="Scrivi qui il tuo messaggio..." required aria-required="true"></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
@@ -294,8 +313,8 @@
                         <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 2px solid var(--light);">
                             <p style="color: var(--gray); margin-bottom: 1rem;">Oppure contattami direttamente</p>
                             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                                <a href="tel:+393384531102" class="btn btn-secondary">📞 Chiama</a>
-                                <a href="https://wa.me/393384531102" class="btn btn-whatsapp" target="_blank">💬 WhatsApp</a>
+                                <a href="tel:+393384531102" class="btn btn-secondary" aria-label="Chiama Marco Baldi">📞 Chiama</a>
+                                <a href="https://wa.me/393384531102" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contattami su WhatsApp">💬 WhatsApp</a>
                             </div>
                         </div>
                     </div>
@@ -303,6 +322,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -335,21 +355,25 @@
 
     <script src="script.js"></script>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Mostra messaggio successo se pagina aperta post-invio
+        (function() {
+            if (window.location.search.indexOf('inviato=1') !== -1) {
+                var success = document.getElementById('contactSuccess');
+                var form = document.getElementById('contactForm');
+                if (success && form) {
+                    form.style.display = 'none';
+                    success.style.display = 'block';
+                }
+            }
+        })();
 
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             if (typeof gtag === 'function') {
                 gtag('event', 'generate_lead', {
                     'method': 'ContactForm',
                     'event_label': 'Modulo Contatti'
                 });
             }
-
-            setTimeout(() => {
-                document.getElementById('contactForm').style.display = 'none';
-                document.getElementById('contactSuccess').style.display = 'block';
-                document.getElementById('contactSuccess').scrollIntoView({ behavior: 'smooth' });
-            }, 500);
         });
     </script>
 </body>

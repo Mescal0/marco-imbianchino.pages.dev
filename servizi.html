@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
+    <!-- Google Tag Manager (deferred) -->
+    <script>
+        window.addEventListener('load', function() {
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GT-P8QQXMKH');
+        });
+    </script>
+    <!-- End Google Tag Manager -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-X4EQ93HGVP');
     </script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GT-P8QQXMKH');</script>
-    <!-- End Google Tag Manager -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const actionButtons = document.querySelectorAll('.service-detail .btn');
+            actionButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'select_content', {
+                            'content_type': 'servizio_button',
+                            'item_id': this.textContent.trim()
+                        });
+                    }
+                });
+            });
+        });
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servizi - Marco Baldi - Imbianchino</title>
     <meta name="description" content="Servizi professionali di imbiancatura, decorazione e manutenzione verde. Scopri tutto quello che posso fare per te.">
+    <link rel="canonical" href="https://marco-imbianchino.pages.dev/servizi.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marco-imbianchino.pages.dev/servizi.html">
+    <meta property="og:title" content="Servizi - Marco Baldi - Imbianchino">
+    <meta property="og:description" content="Servizi professionali di imbiancatura, decorazione e manutenzione verde a Monsummano Terme e provincia di Pistoia.">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Marco Baldi Imbianchino">
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="stylesheet" href="style.css">
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -118,23 +147,26 @@
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-P8QQXMKH"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
+
     <!-- Header/Navbar -->
     <header class="header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navigazione principale">
             <div class="container">
                 <div class="nav-brand">
-                    <h1>Marco Baldi - Imbianchino</h1>
+                    <a href="index.html" style="text-decoration:none;"><h1>Marco Baldi - Imbianchino</h1></a>
                 </div>
-                <button class="nav-toggle" id="navToggle">
+                <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu" id="navMenu">
+                <ul class="nav-menu" id="navMenu" role="list">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="servizi.html" class="active">Servizi</a></li>
+                    <li><a href="servizi.html" class="active" aria-current="page">Servizi</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="preventivo.html">Preventivo</a></li>
                     <li><a href="contatti.html">Contatti</a></li>
@@ -143,6 +175,7 @@
         </nav>
     </header>
 
+    <main id="main-content">
     <!-- Page Header -->
     <div class="page-header">
         <div class="container">
@@ -152,7 +185,7 @@
     </div>
 
     <!-- Servizi Dettagliati -->
-    <section>
+    <section aria-label="Servizi dettagliati">
         <div class="container">
             <!-- Imbiancatura -->
             <div class="service-detail">
@@ -272,6 +305,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -297,7 +331,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Marco Baldi - Imbianchino. Tutti i diritti riservati.</p>
+                <p>&copy; 2026 Marco Baldi - Imbianchino. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>

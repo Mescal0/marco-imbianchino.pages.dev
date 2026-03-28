@@ -4,11 +4,12 @@ const navMenu = document.getElementById('navMenu');
 
 if (navToggle && navMenu) {
     navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        
+        const isOpen = navMenu.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
         // Animazione hamburger menu
         const spans = navToggle.querySelectorAll('span');
-        if (navMenu.classList.contains('active')) {
+        if (isOpen) {
             spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
             spans[1].style.opacity = '0';
             spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
@@ -24,6 +25,7 @@ if (navToggle && navMenu) {
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
             const spans = navToggle.querySelectorAll('span');
             spans[0].style.transform = 'none';
             spans[1].style.opacity = '1';
@@ -73,6 +75,28 @@ function validatePhone(phone) {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { validateEmail, validatePhone };
 }
+
+// FAQ Accordion
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            // Chiudi tutti
+            faqQuestions.forEach(function(q) {
+                q.setAttribute('aria-expanded', 'false');
+                const ans = document.getElementById(q.getAttribute('aria-controls'));
+                if (ans) ans.classList.remove('open');
+            });
+            // Apri quello cliccato se era chiuso
+            if (!expanded) {
+                this.setAttribute('aria-expanded', 'true');
+                const answer = document.getElementById(this.getAttribute('aria-controls'));
+                if (answer) answer.classList.add('open');
+            }
+        });
+    });
+});
 // Monitoraggio Click sul Telefono (Globale)
 document.addEventListener('DOMContentLoaded', function() {
     const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
