@@ -19,21 +19,6 @@
         gtag('js', new Date());
         gtag('config', 'G-X4EQ93HGVP');
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const actionButtons = document.querySelectorAll('.service-detail .btn');
-            actionButtons.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    if (typeof gtag === 'function') {
-                        gtag('event', 'select_content', {
-                            'content_type': 'servizio_button',
-                            'item_id': this.textContent.trim()
-                        });
-                    }
-                });
-            });
-        });
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servizi - Marco Baldi - Imbianchino</title>
@@ -49,100 +34,6 @@
     <!-- Preconnect -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="stylesheet" href="style.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const actionButtons = document.querySelectorAll('.service-detail .btn');
-            actionButtons.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    if (typeof gtag === 'function') {
-                        gtag('event', 'select_content', {
-                            'content_type': 'servizio_button',
-                            'item_id': this.textContent.trim()
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-    <style>
-        .service-detail {
-            background-color: var(--white);
-            padding: 3rem;
-            margin-bottom: 3rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-        }
-
-        .service-detail h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-
-        .service-detail h3 {
-            color: var(--dark);
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .service-detail ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .service-detail ul li {
-            padding: 0.5rem 0;
-            padding-left: 2rem;
-            position: relative;
-        }
-
-        .service-detail ul li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .service-detail p {
-            color: var(--gray);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-        .price-info {
-            background-color: var(--light);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .price-info h4 {
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .page-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
-            color: var(--white);
-            padding: 4rem 0;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .page-header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -157,7 +48,7 @@
         <nav class="navbar" aria-label="Navigazione principale">
             <div class="container">
                 <div class="nav-brand">
-                    <a href="index.html" style="text-decoration:none;"><h1>Marco Baldi - Imbianchino</h1></a>
+                    <a href="index.html"><h1>Marco Baldi - Imbianchino</h1></a>
                 </div>
                 <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
@@ -188,7 +79,7 @@
     <section aria-label="Servizi dettagliati">
         <div class="container">
             <!-- Imbiancatura -->
-            <div class="service-detail">
+            <div id="imbiancatura" class="service-detail">
                 <h2>🎨 Imbiancatura Professionale</h2>
                 <p>Tinteggiatura interna ed esterna con prodotti di alta qualità, garantendo risultati duraturi e finiture impeccabili.</p>
                 
@@ -219,7 +110,7 @@
             </div>
 
             <!-- Decorazioni -->
-            <div class="service-detail">
+            <div id="decorazioni" class="service-detail">
                 <h2>✨ Decorazioni e Finiture Speciali</h2>
                 <p>Tecniche decorative per rendere unici i tuoi ambienti con effetti particolari e personalizzati.</p>
                 
@@ -249,7 +140,7 @@
             </div>
 
             <!-- Manutenzione Verde -->
-            <div class="service-detail">
+            <div id="verde" class="service-detail">
                 <h2>🌿 Manutenzione Verde</h2>
                 <p>Cura professionale di giardini, aree verdi e spazi esterni per mantenerli sempre in ordine e in salute.</p>
                 
@@ -296,8 +187,8 @@
             </div>
 
             <!-- CTA -->
-            <div class="text-center" style="margin-top: 3rem;">
-                <h2 style="margin-bottom: 1.5rem;">Interessato ai Miei Servizi?</h2>
+            <div class="section-cta">
+                <h2>Interessato ai Miei Servizi?</h2>
                 <div class="cta-buttons">
                     <a href="preventivo.html" class="btn btn-primary btn-large">Richiedi Preventivo Gratuito</a>
                     <a href="contatti.html" class="btn btn-outline btn-large">Contattami</a>

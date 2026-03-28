@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <!-- Google Tag Manager (deferred) -->
+    <script>
+        window.addEventListener('load', function() {
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GT-P8QQXMKH');
+        });
+    </script>
+    <!-- End Google Tag Manager -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -23,197 +34,13 @@
     <!-- Preconnect -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .form-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: var(--white);
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .form-section {
-            margin-bottom: 2rem;
-        }
-
-        .form-section h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.875rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .form-group small {
-            display: block;
-            margin-top: 0.25rem;
-            color: var(--gray);
-            font-size: 0.875rem;
-        }
-
-        .checkbox-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-        }
-
-        .checkbox-item input[type="checkbox"] {
-            width: auto;
-            margin-right: 0.75rem;
-            cursor: pointer;
-        }
-
-        .checkbox-item label {
-            margin-bottom: 0;
-            cursor: pointer;
-            font-weight: 400;
-        }
-
-        .estimate-box {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
-            color: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .estimate-box h3 {
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .estimate-amount {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 1rem 0;
-        }
-
-        .estimate-note {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .error-message {
-            color: #dc2626;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
-            display: none;
-        }
-
-        .success-message {
-            background-color: #d1fae5;
-            border-left: 4px solid var(--secondary-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            display: none;
-        }
-
-        .success-message h3 {
-            color: #065f46;
-            margin-bottom: 0.5rem;
-        }
-
-        .success-message p {
-            color: #047857;
-        }
-
-        .page-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
-            color: var(--white);
-            padding: 4rem 0;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .page-header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .radio-group {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-        }
-
-        .radio-item {
-            position: relative;
-        }
-
-        .radio-item input[type="radio"] {
-            position: absolute;
-            opacity: 0;
-        }
-
-        .radio-item label {
-            display: block;
-            padding: 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .radio-item input[type="radio"]:checked + label {
-            border-color: var(--primary-color);
-            background-color: #eff6ff;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .radio-item label:hover {
-            border-color: var(--primary-color);
-        }
-    </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-P8QQXMKH"
+    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
 
     <!-- Header/Navbar -->
@@ -221,7 +48,7 @@
         <nav class="navbar" aria-label="Navigazione principale">
             <div class="container">
                 <div class="nav-brand">
-                    <a href="index.html" style="text-decoration:none;"><h1>Marco Baldi - Imbianchino</h1></a>
+                    <a href="index.html"><h1>Marco Baldi - Imbianchino</h1></a>
                 </div>
                 <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
@@ -403,19 +230,19 @@
 
                     <!-- Submit -->
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                        <button type="submit" class="btn btn-primary btn-large btn-block">
                             Invia Richiesta Preventivo
                         </button>
                     </div>
 
-                    <p class="text-center" style="color: var(--gray); margin-top: 1rem;">
+                    <p class="text-center form-note">
                         <small>* Campi obbligatori</small>
                     </p>
                 </form>
 
                 <!-- Alternative Contact -->
-                <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--light);">
-                    <h3 style="margin-bottom: 1rem;">Preferisci Parlare Direttamente?</h3>
+                <div class="alt-contact">
+                    <h3>Preferisci Parlare Direttamente?</h3>
                     <div class="cta-buttons">
                         <a href="tel:+393384531102" class="btn btn-secondary" aria-label="Chiama Marco Baldi">📞 Chiamami</a>
                         <a href="https://wa.me/393384531102" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contattami su WhatsApp">📱 WhatsApp</a>
