@@ -68,13 +68,15 @@ function initScrollReveal() {
 
     revealElements.forEach(el => el.classList.add('reveal'));
 
+    let revealCounter = 0;
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                // Stagger the animation
+                const delay = revealCounter * 80;
+                revealCounter++;
                 setTimeout(() => {
                     entry.target.classList.add('visible');
-                }, index * 80);
+                }, delay);
                 observer.unobserve(entry.target);
             }
         });
