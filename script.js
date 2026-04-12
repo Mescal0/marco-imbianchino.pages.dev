@@ -53,11 +53,37 @@ const header = document.querySelector('.header');
 if (header) {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+            header.classList.add('scrolled');
         } else {
-            header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            header.classList.remove('scrolled');
         }
+    }, { passive: true });
+}
+
+// Scroll Reveal Animation
+function initScrollReveal() {
+    const revealElements = document.querySelectorAll('.service-card, .feature, .testimonial-card, .faq-item, .service-detail, .portfolio-item, .contact-item');
+    
+    if (!revealElements.length) return;
+
+    revealElements.forEach(el => el.classList.add('reveal'));
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Stagger the animation
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 80);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
     });
+
+    revealElements.forEach(el => observer.observe(el));
 }
 
 // Form validation helper
@@ -77,6 +103,9 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Scroll Reveal
+    initScrollReveal();
+
     // FAQ Accordion
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(function(btn) {
