@@ -36,8 +36,11 @@
     <meta name="twitter:title" content="Marco Baldi - Imbianchino Professionista | Monsummano Terme">
     <meta name="twitter:description" content="Imbianchino professionista a Monsummano Terme e provincia di Pistoia. Preventivo gratuito.">
     <!-- Preconnect risorse esterne -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- JSON-LD LocalBusiness -->
     <script type="application/ld+json">
@@ -104,7 +107,7 @@
         <nav class="navbar" aria-label="Navigazione principale">
             <div class="container">
                 <div class="nav-brand">
-                    <a href="index.html"><h1>Marco Baldi - Imbianchino</h1></a>
+                    <a href="index.html"><span class="brand-text">Marco Baldi - Imbianchino</span></a>
                 </div>
                 <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
@@ -144,6 +147,7 @@
     <section class="services-preview" aria-labelledby="servizi-titolo">
         <div class="container">
             <h2 class="section-title" id="servizi-titolo">I Miei Servizi</h2>
+            <p class="section-subtitle">Soluzioni professionali per ogni esigenza abitativa</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon" aria-hidden="true">🎨</div>
@@ -174,6 +178,7 @@
     <section aria-labelledby="perche-titolo">
         <div class="container">
             <h2 class="section-title" id="perche-titolo">Perché Scegliermi</h2>
+            <p class="section-subtitle">Professionalità, qualità e trasparenza in ogni progetto</p>
             <div class="features-grid">
                 <div class="feature">
                     <div class="feature-icon" aria-hidden="true">⭐</div>
@@ -203,6 +208,7 @@
     <section class="testimonials" aria-labelledby="testimonianze-titolo">
         <div class="container">
             <h2 class="section-title" id="testimonianze-titolo">Cosa Dicono i Clienti</h2>
+            <p class="section-subtitle">La soddisfazione dei clienti è la mia miglior referenza</p>
             <div class="testimonials-grid">
                 <article class="testimonial-card">
                     <div class="testimonial-stars" aria-label="5 stelle su 5">★★★★★</div>
@@ -245,6 +251,7 @@
     <section aria-labelledby="faq-titolo">
         <div class="container">
             <h2 class="section-title" id="faq-titolo">Domande Frequenti</h2>
+            <p class="section-subtitle">Le risposte alle domande più comuni</p>
             <div class="faq-list" role="list">
                 <div class="faq-item" role="listitem">
                     <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-btn-1">
@@ -307,6 +314,11 @@
         </div>
     </section>
     </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/393384531102" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contattami su WhatsApp">
+        💬
+    </a>
 
     <!-- Footer -->
     <footer class="footer">
