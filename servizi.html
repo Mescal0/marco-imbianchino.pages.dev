@@ -1,240 +1,549 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <!-- Google Tag Manager (deferred) -->
-    <script>
-        window.addEventListener('load', function() {
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GT-P8QQXMKH');
-        });
-    </script>
-    <!-- End Google Tag Manager -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-X4EQ93HGVP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-X4EQ93HGVP');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servizi - Marco Baldi - Imbianchino</title>
-    <meta name="description" content="Servizi professionali di imbiancatura, decorazione e manutenzione verde. Scopri tutto quello che posso fare per te.">
-    <link rel="canonical" href="https://marco-imbianchino.pages.dev/servizi.html">
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://marco-imbianchino.pages.dev/servizi.html">
-    <meta property="og:title" content="Servizi - Marco Baldi - Imbianchino">
-    <meta property="og:description" content="Servizi professionali di imbiancatura, decorazione e manutenzione verde a Monsummano Terme e provincia di Pistoia.">
-    <meta property="og:locale" content="it_IT">
-    <meta property="og:site_name" content="Marco Baldi Imbianchino">
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servizi Imbianchino Monsummano Terme - Marco Baldi</title>
+  <meta name="description" content="Tinteggiatura professionale, decorazioni e manutenzione verde a Monsummano Terme, Pistoia, Pescia, Montecatini. Preventivo gratuito. Marco Baldi imbianchino." />
+ 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+ 
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    :root {
+      --c-bg:       #f9f7f4;
+      --c-surface:  #ffffff;
+      --c-text:     #1a1a1a;
+      --c-muted:    #6b6b6b;
+      --c-accent:   #2c6e49;
+      --c-accent2:  #e8f5ee;
+      --c-border:   #e0dcd5;
+      --c-warn:     #c8842a;
+      --ff-head:    'Playfair Display', Georgia, serif;
+      --ff-body:    'DM Sans', system-ui, sans-serif;
+      --radius:     10px;
+      --shadow:     0 2px 16px rgba(0,0,0,.07);
+    }
+ 
+    body {
+      background: var(--c-bg);
+      color: var(--c-text);
+      font-family: var(--ff-body);
+      font-weight: 400;
+      line-height: 1.7;
+    }
+ 
+    /* ── NAV ── */
+    nav {
+      background: var(--c-surface);
+      border-bottom: 1px solid var(--c-border);
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 62px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-brand {
+      font-family: var(--ff-head);
+      font-size: 1.15rem;
+      color: var(--c-text);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a {
+      color: var(--c-muted);
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-links a:hover, .nav-links a[aria-current] { color: var(--c-accent); }
+    @media(max-width:600px){
+      .nav-links { gap: .9rem; }
+      .nav-links a { font-size: .8rem; }
+    }
+ 
+    /* ── HERO SERVIZI ── */
+    .page-hero {
+      background: var(--c-surface);
+      border-bottom: 1px solid var(--c-border);
+      padding: 3.5rem 1.5rem 3rem;
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-family: var(--ff-head);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.2;
+      margin-bottom: .75rem;
+    }
+    .page-hero p {
+      color: var(--c-muted);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin: 0 auto 1.5rem;
+    }
+    .badge-zona {
+      display: inline-block;
+      background: var(--c-accent2);
+      color: var(--c-accent);
+      font-size: .82rem;
+      font-weight: 500;
+      padding: .3rem .8rem;
+      border-radius: 999px;
+      border: 1px solid #b4dcc4;
+    }
+ 
+    /* ── LAYOUT MAIN ── */
+    main { max-width: 860px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+ 
+    /* ── SEZIONE SERVIZIO ── */
+    .service-section {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+    }
+    .service-header {
+      padding: 1.6rem 2rem 1.4rem;
+      border-bottom: 1px solid var(--c-border);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .service-icon {
+      width: 46px; height: 46px;
+      border-radius: 10px;
+      background: var(--c-accent2);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .service-icon svg { width: 24px; height: 24px; stroke: var(--c-accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .service-header-text h2 {
+      font-family: var(--ff-head);
+      font-size: 1.4rem;
+      line-height: 1.2;
+      margin-bottom: .3rem;
+    }
+    .service-header-text p { color: var(--c-muted); font-size: .95rem; }
+ 
+    .service-body { padding: 1.6rem 2rem; display: grid; gap: 1.5rem; }
+    @media(min-width:600px){ .service-body { grid-template-columns: 1fr 1fr; } }
+ 
+    .service-col h3 {
+      font-family: var(--ff-head);
+      font-size: 1rem;
+      margin-bottom: .6rem;
+      color: var(--c-accent);
+    }
+    .service-col ul { list-style: none; padding: 0; }
+    .service-col ul li {
+      padding: .3rem 0;
+      font-size: .92rem;
+      border-bottom: 1px solid var(--c-border);
+      color: var(--c-text);
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+    }
+    .service-col ul li:last-child { border-bottom: none; }
+    .service-col ul li::before {
+      content: '';
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--c-accent);
+      flex-shrink: 0;
+      margin-top: .55rem;
+    }
+ 
+    /* prezzo tag */
+    .price-tag {
+      display: inline-block;
+      background: #fff8ee;
+      border: 1px solid #f0c97a;
+      color: var(--c-warn);
+      font-size: .82rem;
+      font-weight: 500;
+      padding: .25rem .75rem;
+      border-radius: 999px;
+      margin-top: .5rem;
+    }
+ 
+    /* ── ALTRI SERVIZI (grid compatta) ── */
+    .extra-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: .75rem;
+      padding: 1.2rem 2rem 1.6rem;
+    }
+    .extra-item {
+      font-size: .9rem;
+      padding: .5rem .75rem;
+      background: var(--c-bg);
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .extra-item::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--c-accent);
+      flex-shrink: 0;
+    }
+ 
+    /* ── ZONE SERVITE ── */
+    .zone-bar {
+      background: var(--c-accent2);
+      border: 1px solid #b4dcc4;
+      border-radius: var(--radius);
+      padding: 1.4rem 2rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      align-items: center;
+    }
+    .zone-bar strong { color: var(--c-accent); font-size: .95rem; margin-right: .4rem; }
+    .zone-pill {
+      background: white;
+      border: 1px solid #b4dcc4;
+      color: var(--c-accent);
+      font-size: .82rem;
+      font-weight: 500;
+      padding: .25rem .75rem;
+      border-radius: 999px;
+    }
+ 
+    /* ── CTA FINALE ── */
+    .cta-box {
+      background: var(--c-accent);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: white;
+      margin-top: .5rem;
+    }
+    .cta-box h2 {
+      font-family: var(--ff-head);
+      font-size: 1.6rem;
+      margin-bottom: .6rem;
+    }
+    .cta-box p { font-size: .97rem; opacity: .88; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+    .btn {
+      display: inline-block;
+      padding: .75rem 1.6rem;
+      border-radius: 8px;
+      font-family: var(--ff-body);
+      font-size: .95rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity .2s, transform .15s;
+    }
+    .btn:hover { opacity: .88; transform: translateY(-1px); }
+    .btn-white { background: white; color: var(--c-accent); }
+    .btn-outline { background: transparent; border: 2px solid white; color: white; }
+ 
+    /* ── FOOTER ── */
+    footer {
+      background: var(--c-text);
+      color: #ccc;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: .88rem;
+    }
+    footer a { color: #aaa; text-decoration: none; }
+    footer .footer-grid {
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5rem;
+      text-align: left;
+    }
+    footer h4 { color: white; font-size: .9rem; margin-bottom: .6rem; }
+    footer ul { list-style: none; }
+    footer ul li + li { margin-top: .35rem; }
+    footer ul a:hover { color: white; }
+ 
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed;
+      bottom: 1.5rem; right: 1.5rem;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,.2);
+      z-index: 200;
+      transition: transform .2s;
+    }
+    .wa-float:hover { transform: scale(1.08); }
+    .wa-float svg { width: 28px; height: 28px; fill: white; }
+  </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-P8QQXMKH"
-    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
-
-    <!-- Header/Navbar -->
-    <header class="header">
-        <nav class="navbar" aria-label="Navigazione principale">
-            <div class="container">
-                <div class="nav-brand">
-                    <a href="index.html"><span class="brand-text">Marco Baldi - Imbianchino</span></a>
-                </div>
-                <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="navMenu" role="list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="servizi.html" class="active" aria-current="page">Servizi</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="preventivo.html">Preventivo</a></li>
-                    <li><a href="contatti.html">Contatti</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main id="main-content">
-    <!-- Page Header -->
-    <div class="page-header">
-        <div class="container">
-            <h1>I Miei Servizi</h1>
-            <p>Soluzioni professionali per ogni tua esigenza</p>
-        </div>
+ 
+<!-- SKIP LINK -->
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;background:var(--c-accent);color:white;padding:.5rem 1rem;z-index:999;" onfocus="this.style.left='0'">Vai al contenuto principale</a>
+ 
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand">Marco Baldi — Imbianchino</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="servizi.html" aria-current="page">Servizi</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="preventivo.html">Preventivo</a></li>
+    <li><a href="contatti.html">Contatti</a></li>
+  </ul>
+</nav>
+ 
+<!-- HERO -->
+<header class="page-hero">
+  <p class="badge-zona">📍 Monsummano Terme · Pistoia · Pescia · Montecatini</p>
+  <h1>Tinteggiatura, Decorazioni<br>e Manutenzione Verde</h1>
+  <p>Oltre 10 anni di esperienza in provincia di Pistoia. Sopralluogo e preventivo sempre gratuiti, senza impegno.</p>
+</header>
+ 
+<!-- MAIN -->
+<main id="main-content">
+ 
+  <!-- ZONE SERVITE -->
+  <div class="zone-bar">
+    <strong>Zone servite:</strong>
+    <span class="zone-pill">Monsummano Terme</span>
+    <span class="zone-pill">Pistoia</span>
+    <span class="zone-pill">Pescia</span>
+    <span class="zone-pill">Montecatini Terme</span>
+    <span class="zone-pill">Pieve a Nievole</span>
+    <span class="zone-pill">Quarrata</span>
+    <span class="zone-pill">Provincia di Pistoia</span>
+  </div>
+ 
+  <!-- IMBIANCATURA -->
+  <section class="service-section" id="imbiancatura">
+    <div class="service-header">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14l3 3 4-5"/></svg>
+      </div>
+      <div class="service-header-text">
+        <h2>Imbiancatura Professionale a Monsummano Terme</h2>
+        <p>Tinteggiatura interna ed esterna con prodotti certificati. Pareti, soffitti, facciate, infissi in legno.</p>
+      </div>
     </div>
-
-    <!-- Servizi Dettagliati -->
-    <section aria-label="Servizi dettagliati">
-        <div class="container">
-            <!-- Imbiancatura -->
-            <div id="imbiancatura" class="service-detail">
-                <h2>🎨 Imbiancatura Professionale</h2>
-                <p>Tinteggiatura interna ed esterna con prodotti di alta qualità, garantendo risultati duraturi e finiture impeccabili.</p>
-                
-                <h3>Servizi Inclusi</h3>
-                <ul>
-                    <li>Tinteggiatura pareti interne (camere, soggiorni, cucine, bagni)</li>
-                    <li>Tinteggiatura soffitti</li>
-                    <li>Pittura facciate esterne</li>
-                    <li>Trattamento superfici in legno (porte, finestre, battiscopa)</li>
-                    <li>Preparazione superfici (stuccatura, carteggiatura, primer)</li>
-                    <li>Ripristino pareti danneggiate</li>
-                    <li>Protezione mobili e pavimenti</li>
-                    <li>Pulizia finale cantiere</li>
-                </ul>
-
-                <h3>Prodotti Utilizzati</h3>
-                <ul>
-                    <li>Pitture traspiranti e lavabili</li>
-                    <li>Prodotti certificati per ambienti interni</li>
-                    <li>Vernici a basso impatto ambientale</li>
-                    <li>Smalti all'acqua per legno</li>
-                </ul>
-
-                <div class="price-info">
-                    <h4>💡 Informazioni</h4>
-                    <p>Ogni lavoro è unico. Richiedi un preventivo gratuito e personalizzato per il tuo progetto.</p>
-                </div>
-            </div>
-
-            <!-- Decorazioni -->
-            <div id="decorazioni" class="service-detail">
-                <h2>✨ Decorazioni e Finiture Speciali</h2>
-                <p>Tecniche decorative per rendere unici i tuoi ambienti con effetti particolari e personalizzati.</p>
-                
-                <h3>Tecniche Decorative</h3>
-                <ul>
-                    <li>Spugnatura e velatura</li>
-                    <li>Effetto spatolato veneziano</li>
-                    <li>Stucco antico</li>
-                    <li>Effetti materici</li>
-                    <li>Rigature e geometrie</li>
-                    <li>Decorazioni murali personalizzate</li>
-                    <li>Trompe-l'oeil (effetti illusionistici)</li>
-                </ul>
-
-                <h3>Quando Scegliere le Decorazioni</h3>
-                <ul>
-                    <li>Per dare carattere a una parete importante</li>
-                    <li>Per valorizzare ambienti di rappresentanza</li>
-                    <li>Per mascherare imperfezioni con classe</li>
-                    <li>Per creare atmosfere uniche e personalizzate</li>
-                </ul>
-
-                <div class="price-info">
-                    <h4>💡 Consulenza Gratuita</h4>
-                    <p>Contattami per una consulenza personalizzata. Posso mostrarti campioni e consigliarti la soluzione migliore per i tuoi ambienti.</p>
-                </div>
-            </div>
-
-            <!-- Manutenzione Verde -->
-            <div id="verde" class="service-detail">
-                <h2>🌿 Manutenzione Verde</h2>
-                <p>Cura professionale di giardini, aree verdi e spazi esterni per mantenerli sempre in ordine e in salute.</p>
-                
-                <h3>Servizi di Giardinaggio</h3>
-                <ul>
-                    <li>Taglio prato e bordure</li>
-                    <li>Potatura siepi e arbusti</li>
-                    <li>Potatura alberi</li>
-                    <li>Pulizia aiuole e rimozione erbacce</li>
-                    <li>Concimazione e trattamenti</li>
-                    <li>Sistemazione aree verdi</li>
-                    <li>Piccole opere di giardinaggio</li>
-                    <li>Manutenzione ordinaria e straordinaria</li>
-                </ul>
-
-                <h3>Manutenzione Programmata</h3>
-                <ul>
-                    <li>Interventi periodici concordati</li>
-                    <li>Calendario stagionale delle manutenzioni</li>
-                    <li>Monitoraggio salute piante</li>
-                    <li>Gestione irrigazione</li>
-                </ul>
-
-                <div class="price-info">
-                    <h4>💡 Contratti Periodici</h4>
-                    <p>Disponibile servizio con contratto annuale per manutenzione programmata del tuo giardino. Contattami per maggiori informazioni.</p>
-                </div>
-            </div>
-
-            <!-- Altri Servizi -->
-            <div class="service-detail">
-                <h2>🔧 Altri Servizi</h2>
-                <p>Piccole manutenzioni e lavori accessori per completare il tuo progetto.</p>
-                
-                <ul>
-                    <li>Rimozione carta da parati</li>
-                    <li>Applicazione carta da parati</li>
-                    <li>Piccole riparazioni murarie</li>
-                    <li>Stuccature e rasature</li>
-                    <li>Trattamenti antimuffa</li>
-                    <li>Consulenza per scelta colori</li>
-                    <li>Sopralluoghi gratuiti</li>
-                </ul>
-            </div>
-
-            <!-- CTA -->
-            <div class="section-cta">
-                <h2>Interessato ai Miei Servizi?</h2>
-                <div class="cta-buttons">
-                    <a href="preventivo.html" class="btn btn-primary btn-large">Richiedi Preventivo Gratuito</a>
-                    <a href="contatti.html" class="btn btn-outline btn-large">Contattami</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    </main>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/393384531102" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contattami su WhatsApp">
-        💬
-    </a>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Marco Baldi - Imbianchino</h3>
-                    <p>Servizi professionali di imbiancatura e manutenzione verde</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contatti</h3>
-                    <p>Tel: <a href="tel:+393384531102">+39 338 453 1102</a></p>
-                    <p>Email: <a href="mailto:marco.baldi.24@gmail.com">marco.baldi.24@gmail.com</a></p>
-                </div>
-                <div class="footer-section">
-                    <h3>Link Rapidi</h3>
-                    <ul>
-                        <li><a href="servizi.html">Servizi</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="preventivo.html">Preventivo</a></li>
-                        <li><a href="contatti.html">Contattami</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Marco Baldi - Imbianchino. Tutti i diritti riservati.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <div class="service-body">
+      <div class="service-col">
+        <h3>Cosa eseguo</h3>
+        <ul>
+          <li>Tinteggiatura pareti interne (camere, soggiorni, cucine, bagni)</li>
+          <li>Tinteggiatura soffitti</li>
+          <li>Pittura facciate esterne</li>
+          <li>Trattamento superfici in legno (porte, finestre, battiscopa)</li>
+          <li>Preparazione superfici (stuccatura, carteggiatura, primer)</li>
+          <li>Ripristino pareti danneggiate</li>
+          <li>Protezione mobili e pavimenti</li>
+          <li>Pulizia finale del cantiere</li>
+        </ul>
+      </div>
+      <div class="service-col">
+        <h3>Prodotti utilizzati</h3>
+        <ul>
+          <li>Pitture traspiranti e lavabili</li>
+          <li>Prodotti certificati per ambienti interni</li>
+          <li>Vernici a basso impatto ambientale</li>
+          <li>Smalti all'acqua per legno</li>
+          <li>Primer e fondi specifici per ogni superficie</li>
+        </ul>
+        <span class="price-tag">A partire da ~€3–5/m² — dipende da stato delle pareti e finiture</span>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- DECORAZIONI -->
+  <section class="service-section" id="decorazioni">
+    <div class="service-header">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+      </div>
+      <div class="service-header-text">
+        <h2>Decorazioni e Finiture Speciali</h2>
+        <p>Tecniche decorative per ambienti unici: stucco veneziano, spatolato, effetti materici e personalizzazioni su misura.</p>
+      </div>
+    </div>
+    <div class="service-body">
+      <div class="service-col">
+        <h3>Tecniche disponibili</h3>
+        <ul>
+          <li>Spatolato veneziano</li>
+          <li>Stucco antico</li>
+          <li>Spugnatura e velatura</li>
+          <li>Effetti materici e texture</li>
+          <li>Rigature e geometrie</li>
+          <li>Decorazioni murali personalizzate</li>
+          <li>Trompe-l'oeil</li>
+        </ul>
+      </div>
+      <div class="service-col">
+        <h3>Quando conviene</h3>
+        <ul>
+          <li>Per dare carattere a una parete importante</li>
+          <li>Per valorizzare ambienti di rappresentanza</li>
+          <li>Per mascherare imperfezioni con stile</li>
+          <li>Per creare atmosfere uniche</li>
+        </ul>
+        <span class="price-tag">Preventivo su misura — posso mostrarti campioni in sopralluogo</span>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- MANUTENZIONE VERDE -->
+  <section class="service-section" id="verde">
+    <div class="service-header">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 7 7 3 2 3c0 5 4 9 10 9zM12 12c0-5 5-9 10-9-1 5-5 9-10 9"/></svg>
+      </div>
+      <div class="service-header-text">
+        <h2>Manutenzione Verde a Monsummano Terme e Pistoia</h2>
+        <p>Cura professionale di giardini e aree verdi private. Interventi puntuali o contratti periodici su misura.</p>
+      </div>
+    </div>
+    <div class="service-body">
+      <div class="service-col">
+        <h3>Servizi di giardinaggio</h3>
+        <ul>
+          <li>Taglio prato e bordure</li>
+          <li>Potatura siepi e arbusti</li>
+          <li>Potatura alberi (medio-bassa quota)</li>
+          <li>Pulizia aiuole e rimozione erbacce</li>
+          <li>Concimazione e trattamenti</li>
+          <li>Sistemazione aree verdi</li>
+        </ul>
+      </div>
+      <div class="service-col">
+        <h3>Contratto periodico</h3>
+        <ul>
+          <li>Interventi mensili o stagionali concordati</li>
+          <li>Calendario stagionale delle manutenzioni</li>
+          <li>Monitoraggio salute piante</li>
+          <li>Gestione irrigazione</li>
+        </ul>
+        <span class="price-tag">Contratto annuale disponibile — contattami per un preventivo</span>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ALTRI SERVIZI -->
+  <section class="service-section" id="altri">
+    <div class="service-header">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <div class="service-header-text">
+        <h2>Altri Servizi e Lavori Accessori</h2>
+        <p>Tutto quello che serve per completare il tuo progetto, senza dover chiamare altri artigiani.</p>
+      </div>
+    </div>
+    <div class="extra-grid">
+      <span class="extra-item">Rimozione carta da parati</span>
+      <span class="extra-item">Applicazione carta da parati</span>
+      <span class="extra-item">Piccole riparazioni murarie</span>
+      <span class="extra-item">Stuccature e rasature</span>
+      <span class="extra-item">Trattamenti antimuffa</span>
+      <span class="extra-item">Consulenza per scelta colori</span>
+      <span class="extra-item">Sopralluogo gratuito</span>
+      <span class="extra-item">Isolamento termico (pittura)</span>
+    </div>
+  </section>
+ 
+  <!-- CTA FINALE -->
+  <div class="cta-box">
+    <h2>Richiedi un Preventivo Gratuito</h2>
+    <p>Sopralluogo senza impegno in tutta la provincia di Pistoia. Il prezzo concordato è quello finale, senza sorprese.</p>
+    <div class="cta-buttons">
+      <a href="preventivo.html" class="btn btn-white">Compila il modulo preventivo</a>
+      <a href="https://wa.me/393384531102" class="btn btn-outline" target="_blank" rel="noopener">💬 Scrivi su WhatsApp</a>
+    </div>
+  </div>
+ 
+</main>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>Marco Baldi — Imbianchino</h4>
+      <p>Servizi professionali di imbiancatura e manutenzione verde in provincia di Pistoia.</p>
+    </div>
+    <div>
+      <h4>Contatti</h4>
+      <ul>
+        <li><a href="tel:+393384531102">+39 338 453 1102</a></li>
+        <li><a href="mailto:marco.baldi.24@gmail.com">marco.baldi.24@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Link Rapidi</h4>
+      <ul>
+        <li><a href="servizi.html">Servizi</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="preventivo.html">Preventivo</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </div>
+  </div>
+  <p>© 2026 Marco Baldi — Imbianchino. Tutti i diritti riservati.</p>
+</footer>
+ 
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/393384531102" class="wa-float" aria-label="Contatta su WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+ 
+<!-- JSON-LD LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Marco Baldi - Imbianchino",
+  "description": "Tinteggiatura professionale, decorazioni e manutenzione verde a Monsummano Terme e provincia di Pistoia",
+  "telephone": "+393384531102",
+  "email": "marco.baldi.24@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Monsummano Terme",
+    "addressRegion": "PT",
+    "addressCountry": "IT"
+  },
+  "areaServed": ["Monsummano Terme","Pistoia","Pescia","Montecatini Terme","Quarrata","Pieve a Nievole"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servizi imbiancatura e verde",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tinteggiatura interna ed esterna" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Decorazioni e stucco veneziano" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manutenzione verde e giardinaggio" }}
+    ]
+  }
+}
+</script>
+ 
 </body>
 </html>
